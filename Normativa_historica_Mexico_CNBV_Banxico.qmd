@@ -1,5 +1,11 @@
 ---
 title: "Normativa_historica_Mexico_CNBV_Banxico"
-format: html
+format: 
+    html:
+      toc: TRUE
+      toc-depth: 4
+    pdf:  
+      toc: TRUE
+      toc-depth: 4
 ---
 
