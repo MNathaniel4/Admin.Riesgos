@@ -1,10 +1,10 @@
 ---
 title: "Normativa historica Mexico CNBV Banxico"
 format: 
-    pdf:  
+    html:
       toc: TRUE
       toc-depth: 4
-    html:
+    pdf:  
       toc: TRUE
       toc-depth: 4
 ---
@@ -182,17 +182,17 @@ Esto es notorio notando las fechas de publicación de Leyes, Reglamentos y Dispo
 
 Ejemplos son:
 
-LEY DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES, publicada el 28 de abril de 1995.
+  LEY DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES, publicada el 28 de abril de 1995.
 
-En 2004 se publican DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LAS CASAS DE BOLSA.
+  En 2004 se publican DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LAS CASAS DE BOLSA.
 
-LEY DE FONDOS DE INVERSIÓN, 4 de junio de 2001.LEY DEL MERCADO DE VALORES, 30 de diciembre de 2005.
+  LEY DE FONDOS DE INVERSIÓN, 4 de junio de 2001.LEY DEL MERCADO DE VALORES, 30 de diciembre de 2005.
+  
+  REGLAMENTO DE SUPERVISIÓN DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES,18 de enero de 2005.
 
-REGLAMENTO DE SUPERVISIÓN DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES,18 de enero de 2005.
+  LEY PARA REGULAR LAS ACTIVIDADES DE LAS SOCIEDADES COOPERATIVAS DE AHORRO Y PRÉSTAMO, 13 de agosto de 2009.
 
-LEY PARA REGULAR LAS ACTIVIDADES DE LAS SOCIEDADES COOPERATIVAS DE AHORRO Y PRÉSTAMO, 13 de agosto de 2009.
-
-DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LOS ALMACENES GENERALES DE DEPÓSITO, CASAS DE CAMBIO, UNIONES DE CRÉDITO Y SOCIEDADES FINANCIERAS DE OBJETO MÚLTIPLE REGULADAS publicadas en Enero de 2009
+  DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LOS ALMACENES GENERALES DE DEPÓSITO, CASAS DE CAMBIO, UNIONES DE CRÉDITO Y SOCIEDADES FINANCIERAS DE OBJETO MÚLTIPLE REGULADAS publicadas en Enero de 2009
 
 
 En particular nos interesan:
@@ -215,15 +215,15 @@ El Banco de México por su parte, busca la estabilidad del sistema financiero en
 
 Remontándonos a 1995, las primeras acciones fueron limitar las posiciones de en moneda extranjera y ciertos instrumentos financieros: 
 
-REGLAS a las que habrán de sujetarse las sociedades y fideicomisos que intervengan en el establecimiento y operación de un mercado de futuros y opciones cotizados en bolsa.31 de diciembre de 1996
+  REGLAS a las que habrán de sujetarse las sociedades y fideicomisos que intervengan en el establecimiento y operación de un mercado de futuros y opciones cotizados en bolsa.31 de diciembre de 1996
 
-RÉGIMEN DE INVERSIÓN PARA LAS OPERACIONES EN MONEDA EXTRANJERA Y CONDICIÓN A SATISFACER EN EL PLAZO DE LAS OPERACIONES EN DICHA MONEDA. 11 de noviembre de 1997
+  RÉGIMEN DE INVERSIÓN PARA LAS OPERACIONES EN MONEDA EXTRANJERA Y CONDICIÓN A SATISFACER EN EL PLAZO DE LAS OPERACIONES EN DICHA MONEDA. 11 de noviembre de 1997
 
-En general, se puede detectar la combinación de Banxico-CNBV al momento de implementar los requerimientos de Basilea III, por lo que se empieza a notar mucho su participación en la normatividad despues del 2010.
+  En general, se puede detectar la combinación de Banxico-CNBV al momento de implementar los requerimientos de Basilea III, por lo que se empieza a notar mucho su participación en la normatividad despues del 2010.
 
-DISPOSICIONES DE CARÁCTER GENERAL SOBRE LOS REQUERIMIENTOS DE LIQUIDEZ PARA LAS INSTITUCIONES DE BANCA MÚLTIPLE, 31 de diciembre de 2014
+  DISPOSICIONES DE CARÁCTER GENERAL SOBRE LOS REQUERIMIENTOS DE LIQUIDEZ PARA LAS INSTITUCIONES DE BANCA MÚLTIPLE, 31 de diciembre de 2014
 
-Implementación de la regulación de Grandes Exposiciones y el Coeficiente de Financiamiento Estable Neto en México en concordancia con las mejores prácticas internacionales 12 de junio de 2024
+  Implementación de la regulación de Grandes Exposiciones y el Coeficiente de Financiamiento Estable Neto en México en concordancia con las mejores prácticas internacionales 12 de junio de 2024
 
 
 # Conclusión
@@ -275,5 +275,11 @@ https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath
 Wikipedia contributors. (s/f). Basilea III. Wikipedia, The Free Encyclopedia. https://es.wikipedia.org/w/index.php?title=Basilea_III&oldid=164723250
 (S/f). Gob.mx. https://www.cnbv.gob.mx/Documents/Basilea%203%20en%20M%C3%A9xico%20(v16).pdf
 Basel Committee membership. (2013, junio 10). Bis.org. https://www.bis.org/bcbs/membership.htm
+
+
+Comisón Nacional Bancaria y de Valores. (2005, 18 de enero). Disposiciones de carácter general aplicables a las instituciones de crédito. https://www.cnbv.gob.mx/Normatividad/Documents/Disposiciones/InstitucionesCredito/Disposiciones_Instituciones_de_Credito_180105.pdf
+
+
+Comi
 
 
