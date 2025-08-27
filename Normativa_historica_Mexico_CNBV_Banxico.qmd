@@ -1,10 +1,10 @@
 ---
 title: "Normativa historica Mexico CNBV Banxico"
 format: 
-    html:
+    pdf:  
       toc: TRUE
       toc-depth: 4
-    pdf:  
+    html:
       toc: TRUE
       toc-depth: 4
 ---
@@ -24,6 +24,8 @@ Fueron también estas crisis económicas las que empujaron a las jurisdicciones 
 Por último, es en extremo importante conocer como ha evolucionado la normativa nacional entre los dos organismos clave de la materia: la Comisión Nacional Bancaria de Valores (CNBV) y el Banco de México (Banxico). En el tercer tema exploraremos a través de un recorrido cronológico los hitos, leyes, reglamentos y disposiciones que han configurado nuestro sistema financiero actual.
 
 
+
+## Origen histórico de la administración de riesgos
 
 ### Orígenes Primitivos y la Antigüedad
 
@@ -54,11 +56,11 @@ A partir de la segunda mitad del siglo XXI, la administración de riesgos se tra
 El ERM, es un proceso continuo que abarca todos los niveles de una organización. Identifica los riesgos estratégicos, financieros, operativos y de cumplimiento que podrían afectar el logro de los objetivos. El Comité de Organizaciones Patrocinadoras de la Comisión Treadway (COSO), por ejemplo, ha desarrollado marcos de referencia que ayudan a las empresas a implementar un enfoque holístico de la administración de riesgos. Con esto, también nace la figura del Director de Riesgos (Chief Risk Officer), un ejecutivo de alto nivel encargado de supervisar la gestión de riesgos en toda la organización.
 
 
-# Caso práctico: la crisis financiera de 2008
+## Caso práctico: la crisis financiera de 2008
 
 En esta sección analizaremos la mayor crisis desde la Gran Depresión de 1929, la Recesión de 2008, o crisis subprime. Fue causada por una serie de decisiones, tanto gubernamentales como privadas, que ocasionaron que los bancos tuvieran un apalancamiento excesivo. Aunque tiene su origen en el mercado hipotecario estadounidense, sus consecuencias llegan hasta una recesión mundial y la creación de nuevas normas de regulación financiera, como Basilea III, de las que hablaremos más adelante.
 
-## Antecedentes
+### Antecedentes
 
 Aunque es difícil encontrar el suceso exacto que inicia una crisis de este tipo, podríamos señalar la presidencia de Bill Clinton como uno de los principales precursores. Clinton asume la presidencia en 1993 con una campaña marcada por la promesa de priorizar la economía del ciudadano estadounidense.
 
@@ -74,7 +76,7 @@ La combinación de un acceso fácil a la vivienda, grandes conglomerados financi
 
 Estadísticamente parecía que el plan de Clinton había sido un éxito rotundo, la cantidad de ciudadanos propietarios había aumentado aproximadamente un 7% en apenas una década. Sin embargo, en realidad se estaba generando una burbuja inmobiliaria, pues se creía que era un mercado que nunca bajaba de precio, generando pánico entre los compradores.
 
-##La crisis y el estallido de la burbuja
+### La crisis y el estallido de la burbuja
 
 Las condiciones expuestas previamente hicieron que los bancos vieran una máquina de dinero infinito, se popularizó un nuevo tipo de hipoteca que hacía descuentos en los primeros pagos. Así, vendían hipotecas a personas que no podían pagarlas, después de cobrar un par de meses o años, recuperaban la vivienda que no pudo ser pagada, para venderla nuevamente. Este ciclo funcionaba siempre y cuando el precio de la vivienda siguiera aumentando año con año.
 
@@ -106,8 +108,7 @@ Respuesta regulatoria
 Esta crisis y la combinación de factores que dieron pie a ella, retrataron la insuficiencia del marco regulatorio previo, lo que desencadenó en la creación de Basilea III, de la que hablaremos en profundidad más adelante.
 
 
-
-# ¿Qué es Basilea III?
+## Basilea III
 
 Los Acuerdos de Basilea III, mejor conocidos como “Basilea III”, se refieren a un conjunto de propuestas de reforma de la regulación bancaria, publicadas a partir del 16 de diciembre de 2010.
 El Comité de Supervisión Bancaria de Basilea (con sede en la ciudad de Basilea, Suiza) es la principal organización en materia regulación y supervisión bancaria, cuyo objetivo principal es el de mejorar la estabilidad financiera a nivel mundial. El Comité está compuesto, actualmente, por 28 jurisdicciones de todo el mundo representados por miembros de la autoridad supervisora de cada sistema bancario. 
@@ -115,12 +116,13 @@ México actualmente es miembro y es representado institucionalmente por la Comis
 Basilea III es entonces la tercera generación de acuerdos de regulación bancaria adoptados por el Comité de Supervisión Bancaria de Basilea y surgen como una respuesta a la crisis financiera de 2007-2009. El objetivo de estos acuerdos es reforzar la regulación, la supervisión y la gestión de riesgo de los bancos. 
 Las medidas de Basilea III constituyen mínimos aplicables a bancos con actividad internacional y los miembros se comprometen a implementar y aplicar las normas en sus jurisdicciones nacionales. 
 
-##¿Qué medidas contempla Basilea III?
+### ¿Qué medidas contempla Basilea III?
 
-Capital 
+*Capital* 
 
 El acuerdo de Basilea III propone a los bancos aumentar sus reservas de capital para protegerse de posibles caídas. El capital mínimo de calidad (CET1), incluye las acciones ordinarias y los resultados acumulados. El ratio de capital CET1 pasa del 2% al 4,5%, computado sobre el total de los "activos ponderados por riesgo". Esta ratio de capital mínimo debe ser mantenido en todo momento por el banco y es uno de los más importantes.
-(Capital Mínimo de Calidad 1)/(Activos Ponderados por Riesgo)≤4.5%
+
+$${(Capital\space Mínimo\space de\space Calidad )\over(Activos\space Ponderados\space por\space Riesgo)}≤4.5%$$
 
 El llamado Capital Tier 1 incluye, además de las acciones comunes y las utilidades retenidas, las participaciones preferentes, híbridos de capital y deuda sin pagar. 
 En suma, el ratio mínimo de Capital Total (que incluye el Capital Tier 1, más el denominado Capital Tier 2), asciende en total al 8% de los activos ponderados por riesgo.
@@ -128,30 +130,132 @@ Respecto de los "activos ponderados por riesgo", se definen como la suma de los 
 Liquidez
 
 Uno de los planes más importantes de la reforma de Basilea III es la introducción de dos ratios de liquidez: el LCR (Liquidity Coverage Ratio) y el NSFR (Net Stable Funding Ratio). 
+
 El LCR (Coeficiente de Cobertura de Liquidez) es una relación de un mes, que tiene como objetivo requerir a los bancos mantener suficientes activos líquidos de alta calidad para cubrir las salidas netas de efectivo durante un período de 30 días. Su fundamento es el siguiente: los activos líquidos de los que dispone una institución financiera (por ejemplo, bonos gubernamentales y bonos corporativos) deben tener un valor mayor o igual que las salidas potenciales de efectivo (por ejemplo, pagarés que expiran y retiros de cuentas de depósito) de dicha institución. De manera matemática, esto es:
-(Activos Líquidos)/(Salidas Netas de Efectivo)≥100%
+
+$${(Activos\space Líquidos) \over (Salidas\space Netas\space de \space Efectivo)}≥100%$$
+
 El NSFR (Coeficiente de Fondeo Estable Neto) es una relación de un año que tiene como objetivo permitir a los bancos resistir un año a una crisis específica de la institución. Establece que el importe de los requisitos de recursos estables (financiación necesaria estable) debe ser menor que la cantidad de recursos disponibles (financiación estable disponible).
-Financiación Estable Necesaria<Financiación Estable Disponible
 
-##Basilea III en México
+$$Financiación\space Estable\space Necesaria<Financiación\space Estable\space Disponible$$
 
-Integración del Capital
+
+## Basilea III en México
+
+*Integración del Capital*
 
 En México el capital neto está integrado por una parte básica y una parte complementaria, con la parte básica se integrada por capital básico 1 y capital básico 2. 
 
+![Basilea III .1](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/Aplicaci%C3%B3nes%20en%20M%C3%A9xico.png)
 
-Alertas tempranas
+*Alertas tempranas*
+
 Un Banco podrá entrar en el esquema de alertas tempranas si incumple al menos una de las siguientes condiciones:
  
 La CNBV clasificará a las instituciones en categorías (de la I a la V), para efectos de la instrumentación de medidas correctivas conforme a lo siguiente:
- 
-Conclusión
+
+![Basilea III .2](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/Final%20Paco.png)
+
+## Normativa histórica aplicable a México por parte de CNBV y Banxico
+
+La administración de riesgos, en México y el mundo es un tema que surgió no hace demasiado tiempo. 
+
+En particular, en los años 60, solo se hablaba de riesgos relacionados a los accidentes de trabajo, que estaban ya cubiertos por la seguridad social; la responsabilidad civil que tenían los jefes de las empresas, y los riesgos de incendio. 
+
+Es decir, todo esto estaba a cargo del sector asegurador.
+
+La innovación tecnológica de los plásticos supuestamente aumentan la cantidad de siniestros, así como la responsabilidad civil. Esto generó un aumento de primas, que incentivó a que las empresas a intentar cubrirse de sus riesgos ellas mismas, adoptando un enfoque prospectivo en vez de retrospectivo. 
+
+En México se empieza a hablar del término en 1972, mediante un contacto con la American Society of Insurance Management que tuvieron ciertas personas encargadas de algunos programas de seguros en empresas. El objetivo de la ASIM era difundir el Risk Management.
+
+Esto propició una réplica por parte de los Mexicanos, creando el denominado AMARC (Asociación Mexicana de Administradores de Riesgos, A.C) que tenía como objetivos promover la disciplina aprendida, mediante la enseñanza y fomento del estudio de las técnicas conocidas para el manejo de riesgos. Esto fomentaría la recolección y acercamiento a datos que pudieran proporcionar información estadística acerca de los riesgos. La AMARC también intentaría entablar relaciones con distintas asociaciones con el mismo fin, para compartir información y técnicas, e intentar entablar relaciones de cooperación. 
+
+En 1984 cambia su nombre al Instituto Mexicano de Administradores de Riesgos, A.C.
+
+En la actualidad, no queda ningún rastro de la AMARC ni el IMARC, ni algún tipo de secuela. 
+
+Sin embargo, la regulación por parte de la CNBV se puede rastrear a la crisis generada por el error de diciembre. Esto debido a que se tenían controles bastante laxos acerca de los riesgos de prestar a personas y empresas, aunado a un inexistente control de los riesgos de mercado, en particular de la devaluación, provocando que muchas de estas instituciones se tuvieran que declarar en quiebra. El uso FOBAPROA fue esencial para la compra de estos bancos, sanarlos y re-venderlos. 
+
+La reacción fue adoptar estándares internacionales, como Basilea I, creados en 1998, así como empezar a crear un marco regulatorio mucho más sólido y detallado. 
+
+Esto es notorio notando las fechas de publicación de Leyes, Reglamentos y Disposiciones aplicables a los distintos sectores de los mercados financieros.
+
+Ejemplos son:
+
+LEY DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES, publicada el 28 de abril de 1995.
+
+En 2004 se publican DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LAS CASAS DE BOLSA.
+
+LEY DE FONDOS DE INVERSIÓN, 4 de junio de 2001.LEY DEL MERCADO DE VALORES, 30 de diciembre de 2005.
+
+REGLAMENTO DE SUPERVISIÓN DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES,18 de enero de 2005.
+
+LEY PARA REGULAR LAS ACTIVIDADES DE LAS SOCIEDADES COOPERATIVAS DE AHORRO Y PRÉSTAMO, 13 de agosto de 2009.
+
+DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LOS ALMACENES GENERALES DE DEPÓSITO, CASAS DE CAMBIO, UNIONES DE CRÉDITO Y SOCIEDADES FINANCIERAS DE OBJETO MÚLTIPLE REGULADAS publicadas en Enero de 2009
+
+
+En particular nos interesan:
+
+
+En 2005 se publicaron las DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LAS INSTITUCIONES DE CRÉDITO en el diario oficial de la federación. Dondé la CNBV  empieza a hacer más robusta la administración de riesgos. En particular, se tienen secciones enteras relacionadas a la administración y cuantificación de riesgos a lo largo del capítulo III y IV. En este se hacen varias definiciones y se exponen metodologías para el cálculo de riesgos de crédito. 
+
+También, dentro de los reportes, en el Artículo 216 se menciona que en el reporte de adecuación de capital y evaluación de calidad de los activos  tienen que ir mínimo a la par con los lineamientos emitidos por el Comité de Basilea.
+
+Se pueden notar a lo largo del documento la aparición de la clasificación de reservas por grado de riesgo, el ratio de Cooke minimo del 8% así como la creación de áreas independientes para su administración y cuantificación.
+
+Se puede rastrear el uso de calificadoras al 22 de Agosto del 2008 así como modificaciones en los reportes que se deben entregar. Las calificadoras serían FITCH, HR RATINGS, MOODÝS, S&P.  Lo que sugiere el comienzo de la adopción de Basilea II. 
+
+En la actualidad, esta circular también cuenta con controles de Ratios de Liquidez, Ratios de Apalancamiento, y distintas medidas de capitalización relacionadas a Basilea III, que surgieron debido a la crisis financiera del 2007-2008. 
+
+Esta gestión integral de riesgos no solo se adoptó al sector de las instituciones de crédito, sino que también se le aplicó a las Sociedades Financieras de Objeto Múltiple y obviamente, a las casas de bolsa.  
+
+
+El Banco de México por su parte, busca la estabilidad del sistema financiero en su conjunto, por lo que, su orientación es completamente la prevención de riesgos sistemáticos. Este ha trabajado a lo largo del tiempo con la CNBV.
+
+Remontándonos a 1995, las primeras acciones fueron limitar las posiciones de en moneda extranjera y ciertos instrumentos financieros: 
+
+REGLAS a las que habrán de sujetarse las sociedades y fideicomisos que intervengan en el establecimiento y operación de un mercado de futuros y opciones cotizados en bolsa.31 de diciembre de 1996
+
+RÉGIMEN DE INVERSIÓN PARA LAS OPERACIONES EN MONEDA EXTRANJERA Y CONDICIÓN A SATISFACER EN EL PLAZO DE LAS OPERACIONES EN DICHA MONEDA. 11 de noviembre de 1997
+
+En general, se puede detectar la combinación de Banxico-CNBV al momento de implementar los requerimientos de Basilea III, por lo que se empieza a notar mucho su participación en la normatividad despues del 2010.
+
+DISPOSICIONES DE CARÁCTER GENERAL SOBRE LOS REQUERIMIENTOS DE LIQUIDEZ PARA LAS INSTITUCIONES DE BANCA MÚLTIPLE, 31 de diciembre de 2014
+
+Implementación de la regulación de Grandes Exposiciones y el Coeficiente de Financiamiento Estable Neto en México en concordancia con las mejores prácticas internacionales 12 de junio de 2024
+
+
+# Conclusión
+
 Esta crisis no fue causada por un único factor, sino por la interacción de muchos sistemas cuyo riesgo no supo ser medido en su momento. El colapso no sólo de grandes agentes como Lehman Brothers, sino del sistema, reflejan la poca capacidad que tenemos para contener riesgos. 
 
 
+# Referencias
 
+Esteva. F. Eduardo (1994) Guía Básica de Administración de Riesgos. Comisión Nacional de Seguros y Fianzas. 
+
+https://amasfac.info/boletines/anexos/Guia%20Basica%20de%20Administraci%C3%B3n%20de%20Riesgos.pdf
+
+https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/reglas-conjuntas-bonos-de-desarrollo-del-gobierno-/%7B7CED901B-B1AF-2B98-6F15-73AC1248B5FF%7D.pdf
+
+https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/circular-telefax-e-67-2005/%7B379470F1-FC97-3C6A-60FC-ED76BA22A4DF%7D.pdf
+
+https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/reglas-conjuntas-bonos-de-desarrollo-del-gobierno-/%7B7CED901B-B1AF-2B98-6F15-73AC1248B5FF%7D.pdf
+
+https://dof.gob.mx/nota_detalle.php?codigo=5377902&fecha=31/12/2014#gsc.tab=0
+
+https://dof.gob.mx/index_113.php?year=2014&month=12&day=31#gsc.tab=0
+
+https://dof.gob.mx/nota_detalle.php?codigo=5377887&fecha=31/12/2014#gsc.tab=0
+
+https://dof.gob.mx/nota_detalle.php?codigo=5377887&fecha=31/12/2014#gsc.tab=0
 
 https://claudiogut.medium.com/history-of-risk-management-850ffd82e691
+
+https://dof.gob.mx/nota_detalle.php?codigo=5377902&fecha=31/12/2014
+
+https://dof.gob.mx/index_113.php?year=2014&month=12&day=24#gsc.tab=0
 
 https://prezi.com/p/btqpz1cc9cz6/antecedentes-y-contexto-actual-de-la-administracion-del-riesgo
 

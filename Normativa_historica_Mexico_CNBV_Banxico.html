@@ -34,6 +34,35 @@ ul.task-list li input[type="checkbox"] {
 <link href="Normativa_historica_Mexico_CNBV_Banxico_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="Normativa_historica_Mexico_CNBV_Banxico_files/libs/bootstrap/bootstrap-1bc8a17f135ab3d594c857e9f48e611b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -45,7 +74,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#origen-histórico-de-la-administración-de-riesgos" id="toc-origen-histórico-de-la-administración-de-riesgos" class="nav-link" data-scroll-target="#origen-histórico-de-la-administración-de-riesgos">Origen histórico de la administración de riesgos</a>
   <ul>
   <li><a href="#orígenes-primitivos-y-la-antigüedad" id="toc-orígenes-primitivos-y-la-antigüedad" class="nav-link" data-scroll-target="#orígenes-primitivos-y-la-antigüedad">Orígenes Primitivos y la Antigüedad</a></li>
   <li><a href="#renacimiento-y-la-era-de-los-descubrimientos" id="toc-renacimiento-y-la-era-de-los-descubrimientos" class="nav-link" data-scroll-target="#renacimiento-y-la-era-de-los-descubrimientos">Renacimiento y la Era de los Descubrimientos</a></li>
@@ -56,7 +86,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#antecedentes" id="toc-antecedentes" class="nav-link" data-scroll-target="#antecedentes">Antecedentes</a></li>
   </ul></li>
-  <li><a href="#qué-es-basilea-iii" id="toc-qué-es-basilea-iii" class="nav-link" data-scroll-target="#qué-es-basilea-iii">¿Qué es Basilea III?</a></li>
+  <li><a href="#basilea-iii" id="toc-basilea-iii" class="nav-link" data-scroll-target="#basilea-iii">Basilea III</a>
+  <ul>
+  <li><a href="#qué-medidas-contempla-basilea-iii" id="toc-qué-medidas-contempla-basilea-iii" class="nav-link" data-scroll-target="#qué-medidas-contempla-basilea-iii">¿Qué medidas contempla Basilea III?</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Normativa_historica_Mexico_CNBV_Banxico.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
@@ -90,6 +123,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Normativa histórica aplicable a México por parte de CNBV y Banxico.</p></li>
 </ol>
 <p>En primera instancia el trabajo pretende exponer de manera compacta el contexto histórico bajo el cual nace la Administración de riesgos tal como la conocemos hoy en día. Podríamos decir que la Administración de riesgos aparece como respuesta a la incertidumbre y aparición de peligros implicados al comercio y antiguas industrias como la agricultura, hasta irse sofisticando y adoptando nuevas herramientas como respuesta a las crisis económicas que llevarían a tomar a la materia un enfoque más matemático, estratégico y regulatorio. Fueron también estas crisis económicas las que empujaron a las jurisdicciones e instituciones centrales financieras a establecer acuerdos y normas regulatorias tales como lo fueron las normativas internacionales establecidas por el Comité de Supervisión Bancaria de Basilea (CSBB) Basilea I, II y III que buscan fortalecer la regulación, gestión y supervisión del sector financiero. Por último, es en extremo importante conocer como ha evolucionado la normativa nacional entre los dos organismos clave de la materia: la Comisión Nacional Bancaria de Valores (CNBV) y el Banco de México (Banxico). En el tercer tema exploraremos a través de un recorrido cronológico los hitos, leyes, reglamentos y disposiciones que han configurado nuestro sistema financiero actual.</p>
+</section>
+<section id="origen-histórico-de-la-administración-de-riesgos" class="level2">
+<h2 class="anchored" data-anchor-id="origen-histórico-de-la-administración-de-riesgos">Origen histórico de la administración de riesgos</h2>
 <section id="orígenes-primitivos-y-la-antigüedad" class="level3">
 <h3 class="anchored" data-anchor-id="orígenes-primitivos-y-la-antigüedad">Orígenes Primitivos y la Antigüedad</h3>
 <p>Los primeros vestigios de la administración de riesgos se encuentran en la antigüedad. Las primeras sociedades, al enfrentarse a la incertidumbre de la naturaleza y los conflictos, desarrollaron prácticas para mitigar los peligros. Por ejemplo, las tribus primitivas distribuían los roles de caza y recolección para no depender de una sola fuente de alimento. Las primeras civilizaciones, como la sumeria y la babilónica, utilizaban contratos para compartir los riesgos comerciales y agrícolas. El Código de Hammurabi es un ejemplo de la incipiente regulación de los riesgos, ya que establecía reglas para el comercio y el transporte fluvial que distribuían responsabilidades en caso de pérdidas. Los fenicios, grandes navegantes y comerciantes, fueron pioneros en la diversificación de rutas comerciales para reducir el riesgo de naufragio. De igual forma, los romanos implementaron prácticas de seguros marítimos, donde los prestamistas cobraban primas a los dueños de embarcaciones para cubrir pérdidas en caso de que los barcos no llegaran a puerto, contratos conocidos como foenus nauticum. A la par que existían las “societates”, agrupaciones formadas por ciudadanos que contribuían con una cuota, que funcionaban como una especie de precursoras de las compañías de seguros.</p>
@@ -109,11 +145,11 @@ ul.task-list li input[type="checkbox"] {
 <p>El ERM, es un proceso continuo que abarca todos los niveles de una organización. Identifica los riesgos estratégicos, financieros, operativos y de cumplimiento que podrían afectar el logro de los objetivos. El Comité de Organizaciones Patrocinadoras de la Comisión Treadway (COSO), por ejemplo, ha desarrollado marcos de referencia que ayudan a las empresas a implementar un enfoque holístico de la administración de riesgos. Con esto, también nace la figura del Director de Riesgos (Chief Risk Officer), un ejecutivo de alto nivel encargado de supervisar la gestión de riesgos en toda la organización.</p>
 </section>
 </section>
-<section id="caso-práctico-la-crisis-financiera-de-2008" class="level1">
-<h1>Caso práctico: la crisis financiera de 2008</h1>
+<section id="caso-práctico-la-crisis-financiera-de-2008" class="level2">
+<h2 class="anchored" data-anchor-id="caso-práctico-la-crisis-financiera-de-2008">Caso práctico: la crisis financiera de 2008</h2>
 <p>En esta sección analizaremos la mayor crisis desde la Gran Depresión de 1929, la Recesión de 2008, o crisis subprime. Fue causada por una serie de decisiones, tanto gubernamentales como privadas, que ocasionaron que los bancos tuvieran un apalancamiento excesivo. Aunque tiene su origen en el mercado hipotecario estadounidense, sus consecuencias llegan hasta una recesión mundial y la creación de nuevas normas de regulación financiera, como Basilea III, de las que hablaremos más adelante.</p>
-<section id="antecedentes" class="level2">
-<h2 class="anchored" data-anchor-id="antecedentes">Antecedentes</h2>
+<section id="antecedentes" class="level3">
+<h3 class="anchored" data-anchor-id="antecedentes">Antecedentes</h3>
 <p>Aunque es difícil encontrar el suceso exacto que inicia una crisis de este tipo, podríamos señalar la presidencia de Bill Clinton como uno de los principales precursores. Clinton asume la presidencia en 1993 con una campaña marcada por la promesa de priorizar la economía del ciudadano estadounidense.</p>
 <p>Uno de sus principales objetivos fue que todo aquel que lo deseara pudiera tener una vivienda. Para lograrlo hace uso de dos empresas públicas, Fannie Mae (Asociación Federal Nacional Hipotecaria) y Freddie Mac (Corporación Federal de Préstamos Hipotecarios para la Vivienda), cuya función es comprar hipotecas a otros prestamistas, permitiéndoles recuperar su capital rápidamente para conceder más. Después, respaldan activos con las mismas, logrando así atraer inversionistas al mercado.</p>
 <p>Así, en 1995 la administración de Clinton inicia la “Estrategia nacional de propiedad de la vivienda” cuyo objetivo es relajar los requisitos que debe cumplir un solicitante. Aunque no existía una ley que lo obligue, antes de dicho programa se tenía por costumbre en ambas empresas el aceptar sólo clientes con un buen historial crediticio y un pago inicial de alrededor del 20%. Ahora, tanto Fannie Mae como Freddie Mac tenían que cumplir una cuota que dictaba un porcentaje de hipotecas concedidas que debían favorecer a personas de bajos ingresos, con lo que el enganche mínimo para adquirirlas bajó drásticamente hasta 5% para mediados de 1996 y ya se podrían adquirir sin enganche a mediados del año 2000. Estos serían conocidos como préstamos subprime, y para 2005 representaban alrededor del 25% de las hipotecas concedidas en el país.</p>
@@ -138,20 +174,39 @@ ul.task-list li input[type="checkbox"] {
 <p>Respuesta regulatoria Esta crisis y la combinación de factores que dieron pie a ella, retrataron la insuficiencia del marco regulatorio previo, lo que desencadenó en la creación de Basilea III, de la que hablaremos en profundidad más adelante.</p>
 </section>
 </section>
-<section id="qué-es-basilea-iii" class="level1">
-<h1>¿Qué es Basilea III?</h1>
+<section id="basilea-iii" class="level2">
+<h2 class="anchored" data-anchor-id="basilea-iii">Basilea III</h2>
 <p>Los Acuerdos de Basilea III, mejor conocidos como “Basilea III”, se refieren a un conjunto de propuestas de reforma de la regulación bancaria, publicadas a partir del 16 de diciembre de 2010. El Comité de Supervisión Bancaria de Basilea (con sede en la ciudad de Basilea, Suiza) es la principal organización en materia regulación y supervisión bancaria, cuyo objetivo principal es el de mejorar la estabilidad financiera a nivel mundial. El Comité está compuesto, actualmente, por 28 jurisdicciones de todo el mundo representados por miembros de la autoridad supervisora de cada sistema bancario. México actualmente es miembro y es representado institucionalmente por la Comisión Nacional Bancaria y de Valores (CNVB) y el Banco de México. Basilea III es entonces la tercera generación de acuerdos de regulación bancaria adoptados por el Comité de Supervisión Bancaria de Basilea y surgen como una respuesta a la crisis financiera de 2007-2009. El objetivo de estos acuerdos es reforzar la regulación, la supervisión y la gestión de riesgo de los bancos. Las medidas de Basilea III constituyen mínimos aplicables a bancos con actividad internacional y los miembros se comprometen a implementar y aplicar las normas en sus jurisdicciones nacionales.</p>
-<p>##¿Qué medidas contempla Basilea III?</p>
-<p>Capital</p>
-<p>El acuerdo de Basilea III propone a los bancos aumentar sus reservas de capital para protegerse de posibles caídas. El capital mínimo de calidad (CET1), incluye las acciones ordinarias y los resultados acumulados. El ratio de capital CET1 pasa del 2% al 4,5%, computado sobre el total de los “activos ponderados por riesgo”. Esta ratio de capital mínimo debe ser mantenido en todo momento por el banco y es uno de los más importantes. (Capital Mínimo de Calidad 1)/(Activos Ponderados por Riesgo)≤4.5%</p>
+<section id="qué-medidas-contempla-basilea-iii" class="level3">
+<h3 class="anchored" data-anchor-id="qué-medidas-contempla-basilea-iii">¿Qué medidas contempla Basilea III?</h3>
+<p><em>Capital</em></p>
+<p>El acuerdo de Basilea III propone a los bancos aumentar sus reservas de capital para protegerse de posibles caídas. El capital mínimo de calidad (CET1), incluye las acciones ordinarias y los resultados acumulados. El ratio de capital CET1 pasa del 2% al 4,5%, computado sobre el total de los “activos ponderados por riesgo”. Esta ratio de capital mínimo debe ser mantenido en todo momento por el banco y es uno de los más importantes.</p>
+<p><span class="math display">\[{(Capital\space Mínimo\space de\space Calidad )\over(Activos\space Ponderados\space por\space Riesgo)}≤4.5%\]</span></p>
 <p>El llamado Capital Tier 1 incluye, además de las acciones comunes y las utilidades retenidas, las participaciones preferentes, híbridos de capital y deuda sin pagar. En suma, el ratio mínimo de Capital Total (que incluye el Capital Tier 1, más el denominado Capital Tier 2), asciende en total al 8% de los activos ponderados por riesgo. Respecto de los “activos ponderados por riesgo”, se definen como la suma de los activos del banco, ponderados según el riesgo que cada activo comporte de acuerdo con las directrices de Basilea III. Por ejemplo: un préstamo al consumo, sin ninguna garantía, tiene un peso del 100%; mientras que un bono del estado, generalmente tiene un peso del 0%. Liquidez</p>
-<p>Uno de los planes más importantes de la reforma de Basilea III es la introducción de dos ratios de liquidez: el LCR (Liquidity Coverage Ratio) y el NSFR (Net Stable Funding Ratio). El LCR (Coeficiente de Cobertura de Liquidez) es una relación de un mes, que tiene como objetivo requerir a los bancos mantener suficientes activos líquidos de alta calidad para cubrir las salidas netas de efectivo durante un período de 30 días. Su fundamento es el siguiente: los activos líquidos de los que dispone una institución financiera (por ejemplo, bonos gubernamentales y bonos corporativos) deben tener un valor mayor o igual que las salidas potenciales de efectivo (por ejemplo, pagarés que expiran y retiros de cuentas de depósito) de dicha institución. De manera matemática, esto es: (Activos Líquidos)/(Salidas Netas de Efectivo)≥100% El NSFR (Coeficiente de Fondeo Estable Neto) es una relación de un año que tiene como objetivo permitir a los bancos resistir un año a una crisis específica de la institución. Establece que el importe de los requisitos de recursos estables (financiación necesaria estable) debe ser menor que la cantidad de recursos disponibles (financiación estable disponible). Financiación Estable Necesaria&lt;Financiación Estable Disponible</p>
+<p>Uno de los planes más importantes de la reforma de Basilea III es la introducción de dos ratios de liquidez: el LCR (Liquidity Coverage Ratio) y el NSFR (Net Stable Funding Ratio).</p>
+<p>El LCR (Coeficiente de Cobertura de Liquidez) es una relación de un mes, que tiene como objetivo requerir a los bancos mantener suficientes activos líquidos de alta calidad para cubrir las salidas netas de efectivo durante un período de 30 días. Su fundamento es el siguiente: los activos líquidos de los que dispone una institución financiera (por ejemplo, bonos gubernamentales y bonos corporativos) deben tener un valor mayor o igual que las salidas potenciales de efectivo (por ejemplo, pagarés que expiran y retiros de cuentas de depósito) de dicha institución. De manera matemática, esto es:</p>
+<p><span class="math display">\[{(Activos\space Líquidos) \over (Salidas\space Netas\space de \space Efectivo)}≥100%\]</span></p>
+<p>El NSFR (Coeficiente de Fondeo Estable Neto) es una relación de un año que tiene como objetivo permitir a los bancos resistir un año a una crisis específica de la institución. Establece que el importe de los requisitos de recursos estables (financiación necesaria estable) debe ser menor que la cantidad de recursos disponibles (financiación estable disponible).</p>
+<p><span class="math display">\[Financiación\space Estable\space Necesaria&lt;Financiación\space Estable\space Disponible\]</span></p>
 <p>##Basilea III en México</p>
-<p>Integración del Capital</p>
+<p><em>Integración del Capital</em></p>
 <p>En México el capital neto está integrado por una parte básica y una parte complementaria, con la parte básica se integrada por capital básico 1 y capital básico 2.</p>
-<p>Alertas tempranas Un Banco podrá entrar en el esquema de alertas tempranas si incumple al menos una de las siguientes condiciones:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/Aplicaci%C3%B3nes%20en%20M%C3%A9xico.png" class="img-fluid figure-img"></p>
+<figcaption>Basilea III .1</figcaption>
+</figure>
+</div>
+<p><em>Alertas tempranas</em></p>
+<p>Un Banco podrá entrar en el esquema de alertas tempranas si incumple al menos una de las siguientes condiciones:</p>
 <p>La CNBV clasificará a las instituciones en categorías (de la I a la V), para efectos de la instrumentación de medidas correctivas conforme a lo siguiente:</p>
-<p>Conclusión Esta crisis no fue causada por un único factor, sino por la interacción de muchos sistemas cuyo riesgo no supo ser medido en su momento. El colapso no sólo de grandes agentes como Lehman Brothers, sino del sistema, reflejan la poca capacidad que tenemos para contener riesgos.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/Final%20Paco.png" class="img-fluid figure-img"></p>
+<figcaption>Basilea III .2</figcaption>
+</figure>
+</div>
+<p>#Conclusión Esta crisis no fue causada por un único factor, sino por la interacción de muchos sistemas cuyo riesgo no supo ser medido en su momento. El colapso no sólo de grandes agentes como Lehman Brothers, sino del sistema, reflejan la poca capacidad que tenemos para contener riesgos.</p>
 <p>https://claudiogut.medium.com/history-of-risk-management-850ffd82e691</p>
 <p>https://prezi.com/p/btqpz1cc9cz6/antecedentes-y-contexto-actual-de-la-administracion-del-riesgo</p>
 <p>https://www.youtube.com/watch?v=Eu5iL0FKsIk https://riskmgtstrategies.com/the-evolution-of-risk-management</p>
@@ -161,6 +216,7 @@ ul.task-list li input[type="checkbox"] {
 <p>https://www.federalreserve.gov/econresdata/notes/feds-notes/2015/assessing-the-community-reinvestment-acts-role-in-the-financial-crisis-20150526.html</p>
 <p>https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath</p>
 <p>Wikipedia contributors. (s/f). Basilea III. Wikipedia, The Free Encyclopedia. https://es.wikipedia.org/w/index.php?title=Basilea_III&amp;oldid=164723250 (S/f). Gob.mx. https://www.cnbv.gob.mx/Documents/Basilea%203%20en%20M%C3%A9xico%20(v16).pdf Basel Committee membership. (2013, junio 10). Bis.org. https://www.bis.org/bcbs/membership.htm</p>
+</section>
 </section>
 
 </main>
