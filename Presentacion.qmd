@@ -5,7 +5,7 @@ format: revealjs
 
 ## Crisis de 2008
 
-![](4148-1.jpg)
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/Cesar01.jpg)
 
 ## Antecedentes
 
@@ -15,7 +15,7 @@ format: revealjs
 
 -   Reducción de las tasas de interés
 
-![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/Cesar01.jpg){width="586"}
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/cesar02.jpg){width="586"}
 
 ## La crisis y el estallido de la burbuja
 
@@ -25,5 +25,5 @@ format: revealjs
 
 -   En 2007 estalla la burbuja inmobiliaria
 
-![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/cesar02.jpg){width="706"}
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/cesar03.jpg){width="706"}
 
