@@ -116,6 +116,7 @@ format: revealjs
 
 
 ## Antes de todo
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario00.jpg)
 
 ## 1994: El error de diciembre
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario01.jpg)
@@ -126,5 +127,5 @@ format: revealjs
 
 ## Lo que sigue sucediendo 
 
-![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario05.PNG)
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario05.PNG){heigth="290" width="586"}
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario06.PNG)
