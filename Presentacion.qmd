@@ -123,3 +123,8 @@ format: revealjs
 ## Reacción
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario02.jpg)
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario03.jpg)
+
+## Lo que sigue sucediendo 
+
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario05.PNG)
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario06.PNG)
