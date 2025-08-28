@@ -1,5 +1,5 @@
 ---
-title: "Normativa historica Mexico CNBV Banxico"
+title: "Origen, Casos Prácticos y Normativa Internacional e Histórica en México: CNBV y Banxico"
 format: 
     html:
       toc: TRUE
@@ -8,16 +8,26 @@ format:
       toc: TRUE
       toc-depth: 4
 ---
+Hecho por:
+  
+  Julio César Lopez Becerra^[1609936x@umich.mx]
+  
+  Juan Diego Hernadez Zavala^[2209978x@umich.mx]
+  
+  Franscisco Alvarez Aguilera^[1911217e@umich.mx]
+  
+  Mario Nathaniel de la Vega Ramírez^[1825934f@umich.mx]
+
 
 ## Introducción 
 
 El presente ensayo comprende los siguientes temas asignados en clase:
 
-  1.	Casos prácticos y origen histórico de la administración de riesgos.
+  *1.	Casos prácticos y origen histórico de la administración de riesgos.*
 
-  2.	Normativa internacional, Basilea III.
+  *2.	Normativa internacional, Basilea III.*
 
-  3.	Normativa histórica aplicable a México por parte de CNBV y Banxico.
+  *3.	Normativa histórica aplicable a México por parte de CNBV y Banxico.*
 
 En primera instancia el trabajo pretende exponer de manera compacta el contexto histórico bajo el cual nace la Administración de riesgos tal como la conocemos hoy en día. Podríamos decir que la Administración de riesgos aparece como respuesta a la incertidumbre y aparición de peligros implicados al comercio y antiguas industrias como la agricultura, hasta irse sofisticando y adoptando nuevas herramientas como respuesta a las crisis económicas que llevarían a tomar a la materia un enfoque más matemático, estratégico y regulatorio. 
 Fueron también estas crisis económicas las que empujaron a las jurisdicciones e instituciones centrales financieras a establecer acuerdos y normas regulatorias tales como lo fueron las normativas internacionales establecidas por el Comité de Supervisión Bancaria de Basilea (CSBB) Basilea I, II y III que buscan fortalecer la regulación, gestión y supervisión del sector financiero.
@@ -166,15 +176,15 @@ Es decir, todo esto estaba a cargo del sector asegurador.
 
 La innovación tecnológica de los plásticos supuestamente aumentan la cantidad de siniestros, así como la responsabilidad civil. Esto generó un aumento de primas, que incentivó a que las empresas a intentar cubrirse de sus riesgos ellas mismas, adoptando un enfoque prospectivo en vez de retrospectivo. 
 
-En México se empieza a hablar del término en 1972, mediante un contacto con la American Society of Insurance Management que tuvieron ciertas personas encargadas de algunos programas de seguros en empresas. El objetivo de la ASIM era difundir el Risk Management.
+En México se empieza a hablar del término en 1972, mediante un contacto con la American Society of Insurance Management que tuvieron ciertas personas encargadas de algunos programas de seguros en empresas. El objetivo de la **ASIM** era difundir el Risk Management.
 
-Esto propició una réplica por parte de los Mexicanos, creando el denominado AMARC (Asociación Mexicana de Administradores de Riesgos, A.C) que tenía como objetivos promover la disciplina aprendida, mediante la enseñanza y fomento del estudio de las técnicas conocidas para el manejo de riesgos. Esto fomentaría la recolección y acercamiento a datos que pudieran proporcionar información estadística acerca de los riesgos. La AMARC también intentaría entablar relaciones con distintas asociaciones con el mismo fin, para compartir información y técnicas, e intentar entablar relaciones de cooperación. 
+Esto propició una réplica por parte de los Mexicanos, creando el denominado **AMARC** (Asociación Mexicana de Administradores de Riesgos, A.C) que tenía como objetivos promover la disciplina aprendida, mediante la enseñanza y fomento del estudio de las técnicas conocidas para el manejo de riesgos. Esto fomentaría la recolección y acercamiento a datos que pudieran proporcionar información estadística acerca de los riesgos. La AMARC también intentaría entablar relaciones con distintas asociaciones con el mismo fin, para compartir información y técnicas, e intentar entablar relaciones de cooperación. 
 
 En 1984 cambia su nombre al Instituto Mexicano de Administradores de Riesgos, A.C.
 
-En la actualidad, no queda ningún rastro de la AMARC ni el IMARC, ni algún tipo de secuela. 
+En la actualidad, no queda ningún rastro de la **AMARC** ni el **IMARC**, ni algún tipo de secuela. 
 
-Sin embargo, la regulación por parte de la CNBV se puede rastrear a la crisis generada por el error de diciembre. Esto debido a que se tenían controles bastante laxos acerca de los riesgos de prestar a personas y empresas, aunado a un inexistente control de los riesgos de mercado, en particular de la devaluación, provocando que muchas de estas instituciones se tuvieran que declarar en quiebra. El uso FOBAPROA fue esencial para la compra de estos bancos, sanarlos y re-venderlos. 
+Sin embargo, la regulación por parte de la Comisión Nacional Bancaria y de Valores se puede rastrear a la crisis generada por el error de diciembre. Esto debido a que se tenían controles bastante laxos acerca de los riesgos de prestar a personas y empresas, aunado a un inexistente control de los riesgos de mercado, en particular de la devaluación, provocando que muchas de estas instituciones se tuvieran que declarar en quiebra. El uso FOBAPROA fue esencial para la compra de estos bancos, sanarlos y re-venderlos. 
 
 La reacción fue adoptar estándares internacionales, como Basilea I, creados en 1998, así como empezar a crear un marco regulatorio mucho más sólido y detallado. 
 
@@ -182,29 +192,29 @@ Esto es notorio notando las fechas de publicación de Leyes, Reglamentos y Dispo
 
 Ejemplos son:
 
-  LEY DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES, publicada el 28 de abril de 1995.
+  *LEY DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES*, publicada el 28 de abril de 1995.
 
-  En 2004 se publican DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LAS CASAS DE BOLSA.
+  *DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LAS CASAS DE BOLSA*, En 2004 se publican.
 
-  LEY DE FONDOS DE INVERSIÓN, 4 de junio de 2001.LEY DEL MERCADO DE VALORES, 30 de diciembre de 2005.
+  *LEY DE FONDOS DE INVERSIÓN, 4 de junio de 2001.LEY DEL MERCADO DE VALORES*, 30 de diciembre de 2005.
   
-  REGLAMENTO DE SUPERVISIÓN DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES,18 de enero de 2005.
+  *REGLAMENTO DE SUPERVISIÓN DE LA COMISIÓN NACIONAL BANCARIA Y DE VALORES*,18 de enero de 2005.
 
-  LEY PARA REGULAR LAS ACTIVIDADES DE LAS SOCIEDADES COOPERATIVAS DE AHORRO Y PRÉSTAMO, 13 de agosto de 2009.
+  *LEY PARA REGULAR LAS ACTIVIDADES DE LAS SOCIEDADES COOPERATIVAS DE AHORRO Y PRÉSTAMO*, 13 de agosto de 2009.
 
-  DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LOS ALMACENES GENERALES DE DEPÓSITO, CASAS DE CAMBIO, UNIONES DE CRÉDITO Y SOCIEDADES FINANCIERAS DE OBJETO MÚLTIPLE REGULADAS publicadas en Enero de 2009
+  *DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LOS ALMACENES GENERALES DE DEPÓSITO, CASAS DE CAMBIO, UNIONES DE CRÉDITO Y SOCIEDADES FINANCIERAS DE OBJETO MÚLTIPLE REGULADAS*, publicadas en enero de 2009.
 
 
 En particular nos interesan:
 
 
-En 2005 se publicaron las DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LAS INSTITUCIONES DE CRÉDITO en el diario oficial de la federación. Dondé la CNBV  empieza a hacer más robusta la administración de riesgos. En particular, se tienen secciones enteras relacionadas a la administración y cuantificación de riesgos a lo largo del capítulo III y IV. En este se hacen varias definiciones y se exponen metodologías para el cálculo de riesgos de crédito. 
+En 2005 se publicaron las *DISPOSICIONES DE CARÁCTER GENERAL APLICABLES A LAS INSTITUCIONES DE CRÉDITO* en el diario oficial de la federación. Dondé la CNBV  empieza a hacer más robusta la administración de riesgos. En particular, se tienen secciones enteras relacionadas a la administración y cuantificación de riesgos a lo largo del capítulo III y IV. En este se hacen varias definiciones y se exponen metodologías para el cálculo de riesgos de crédito. 
 
-También, dentro de los reportes, en el Artículo 216 se menciona que en el reporte de adecuación de capital y evaluación de calidad de los activos  tienen que ir mínimo a la par con los lineamientos emitidos por el Comité de Basilea.
+También, dentro de los reportes, en el **Artículo 216** se menciona que en el reporte de adecuación de capital y evaluación de calidad de los activos  tienen que ir mínimo a la par con los lineamientos emitidos por el Comité de Basilea.
 
 Se pueden notar a lo largo del documento la aparición de la clasificación de reservas por grado de riesgo, el ratio de Cooke minimo del 8% así como la creación de áreas independientes para su administración y cuantificación.
 
-Se puede rastrear el uso de calificadoras al 22 de Agosto del 2008 así como modificaciones en los reportes que se deben entregar. Las calificadoras serían FITCH, HR RATINGS, MOODÝS, S&P.  Lo que sugiere el comienzo de la adopción de Basilea II. 
+Se puede rastrear el uso de calificadoras al 22 de Agosto del 2008 así como modificaciones en los reportes que se deben entregar. Las calificadoras serían *FITCH*, *HR RATINGS*, *MOODÝS, S&P*.  Lo que sugiere el comienzo de la adopción de Basilea II. 
 
 En la actualidad, esta circular también cuenta con controles de Ratios de Liquidez, Ratios de Apalancamiento, y distintas medidas de capitalización relacionadas a Basilea III, que surgieron debido a la crisis financiera del 2007-2008. 
 
@@ -215,26 +225,32 @@ El Banco de México por su parte, busca la estabilidad del sistema financiero en
 
 Remontándonos a 1995, las primeras acciones fueron limitar las posiciones de en moneda extranjera y ciertos instrumentos financieros: 
 
-  REGLAS a las que habrán de sujetarse las sociedades y fideicomisos que intervengan en el establecimiento y operación de un mercado de futuros y opciones cotizados en bolsa.31 de diciembre de 1996
+  ** REGLAS a las que habrán de sujetarse las sociedades y fideicomisos que intervengan en el establecimiento y operación de un mercado de futuros y opciones cotizados en bolsa.31 de diciembre de 1996
 
-  RÉGIMEN DE INVERSIÓN PARA LAS OPERACIONES EN MONEDA EXTRANJERA Y CONDICIÓN A SATISFACER EN EL PLAZO DE LAS OPERACIONES EN DICHA MONEDA. 11 de noviembre de 1997
+  ** RÉGIMEN DE INVERSIÓN PARA LAS OPERACIONES EN MONEDA EXTRANJERA Y CONDICIÓN A SATISFACER EN EL PLAZO DE LAS OPERACIONES EN DICHA MONEDA. 11 de noviembre de 1997
 
   En general, se puede detectar la combinación de Banxico-CNBV al momento de implementar los requerimientos de Basilea III, por lo que se empieza a notar mucho su participación en la normatividad despues del 2010.
 
-  DISPOSICIONES DE CARÁCTER GENERAL SOBRE LOS REQUERIMIENTOS DE LIQUIDEZ PARA LAS INSTITUCIONES DE BANCA MÚLTIPLE, 31 de diciembre de 2014
+  *DISPOSICIONES DE CARÁCTER GENERAL SOBRE LOS REQUERIMIENTOS DE LIQUIDEZ PARA LAS INSTITUCIONES DE BANCA MÚLTIPLE*, 31 de diciembre de 2014.
 
-  Implementación de la regulación de Grandes Exposiciones y el Coeficiente de Financiamiento Estable Neto en México en concordancia con las mejores prácticas internacionales 12 de junio de 2024
+  *Implementación de la regulación de Grandes Exposiciones y el Coeficiente de Financiamiento Estable Neto en México en concordancia con las mejores prácticas internacionales*, 12 de junio de 2024.
 
+
+Es importante remarcar que las leyes estan en constante actualización, pues estan en un panorama cambiante, por lo que eventualmente se quedan
+obsoletas o crean vacios. 
 
 # Conclusión
 
-Esta crisis no fue causada por un único factor, sino por la interacción de muchos sistemas cuyo riesgo no supo ser medido en su momento. El colapso no sólo de grandes agentes como Lehman Brothers, sino del sistema, reflejan la poca capacidad que tenemos para contener riesgos. 
+La cuantificación y admisitración de riesgos fue algo que fue surgiendo para eliminar la incertidumbre que podrían generar las diversas actividades que el ser humano fue relizando, así como evitar diversos problemas que fueron sugiendo por actuar de maneras poco prudentes o poco preparadas.
+
+La crisis de 2008 no fue causada por un único factor, sino por la interacción de muchos sistemas cuyo riesgo no supo ser medido en su momento. El colapso no sólo de grandes agentes como Lehman Brothers, sino del sistema, reflejan la poca capacidad que tenemos para contener riesgos. 
+
+La regulación en México sucedió tristemente de manera reactiva, más sin embargo, fue suficiente como para tener más atentas a las autoridades y empezar a optar por una perspectiva más preventiva, donde el sistema financiero esta en constante vigiliancia y por ende, esta en cosntante actualización. 
 
 
 # Referencias
 
 Esteva. F. Eduardo (1994) Guía Básica de Administración de Riesgos. Comisión Nacional de Seguros y Fianzas. 
-
 https://amasfac.info/boletines/anexos/Guia%20Basica%20de%20Administraci%C3%B3n%20de%20Riesgos.pdf
 
 https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/reglas-conjuntas-bonos-de-desarrollo-del-gobierno-/%7B7CED901B-B1AF-2B98-6F15-73AC1248B5FF%7D.pdf
@@ -278,8 +294,4 @@ Basel Committee membership. (2013, junio 10). Bis.org. https://www.bis.org/bcbs/
 
 
 Comisón Nacional Bancaria y de Valores. (2005, 18 de enero). Disposiciones de carácter general aplicables a las instituciones de crédito. https://www.cnbv.gob.mx/Normatividad/Documents/Disposiciones/InstitucionesCredito/Disposiciones_Instituciones_de_Credito_180105.pdf
-
-
-Comi
-
 
