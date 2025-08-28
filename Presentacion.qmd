@@ -112,11 +112,16 @@ format: revealjs
 
 ## Historia de la Normativa en México 
 
-![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario01.jpg)
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario0a.jpg)
 
 
 ## Antes de todo
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario00.jpg)
+
+-   Sistema asegurador: accidentes de trabajo, la responsabilidad civil e incendio.
+
+-   ASIM $\to$ AMARC $\to$ IMARC
+
 
 ## 1994: El error de diciembre
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario01.jpg)
@@ -124,6 +129,12 @@ format: revealjs
 ## Reacción
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario02.jpg)
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/mario03.jpg)
+
+-   Generación de un marco jurico más amplio y robusto.
+
+-   Creación de la CNBV. 1 de mayo de 1995.
+
+-   Adopción de Basilea I.
 
 ## Lo que sigue sucediendo 
 
