@@ -109,6 +109,37 @@ format: revealjs
 -   En 2007 estalla la burbuja inmobiliaria
 
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/cesar03.jpg){width="706"}
+## ¿Qué es Basilea III?
+
+- Basilea III es la tercera generación de acuerdos de regulación bancaria adoptados por el Comité de Supervisión Bancaria de Basilea y surgen como una respuesta a la crisis financiera de 2007-2009. El objetivo de estos acuerdos es reforzar la regulación, la supervisión y la gestión de riesgo de los bancos.
+
+## ¿Qué medidas contempla Basilea III?
+
+### Capital
+
+Basilea III propone a los bancos aumentar sus reservas de capital para protegerse de posibles caídas.
+
+$${(Capital\space Mínimo\space De\space Calidad 1)\over(Activos\space Ponderados\space Por\space Riesgo)}≤4.5%$$
+
+## 
+
+### Liquidez
+
+Uno de los planes más importantes de la reforma de Basilea III fue la introducción de dos ratios de liquidez: el LCR (Liquidity Coverage Ratio) y el NSFR (Net Stable Funding Ratio).
+
+**LCR (Coeficiente de Cobertura de Liquidez):**
+
+$${(Activos\space Líquidos)\over(Salidas\space Netas\space De\space Efectivo)}≥100%$$
+
+**NSFR (Coeficiente de Fondeo Estable Neto):**
+
+$Financiación Estable Necesaria<Financiación Estable Disponible$
+
+## Basilea III en México
+
+Un Banco podrá entrar en el esquema de alertas tempranas si incumple al menos una de las siguientes condiciones:
+
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/paco1.jpg)
 
 ## Historia de la Normativa en México 
 
