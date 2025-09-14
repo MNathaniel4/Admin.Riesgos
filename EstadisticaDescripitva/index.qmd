@@ -1,13 +1,14 @@
 ---
 title: "01.c Tarea de repaso de Estadística descripiva"
 author: "Equipo 3"
-format: 
+format:
+    pdf:  
+      toc: TRUE
+      toc-depth: 4 
     html:
       toc: TRUE
       toc-depth: 4
-    pdf:  
-      toc: TRUE
-      toc-depth: 4
+       
 ---
 
 Hecho por:
@@ -22,13 +23,15 @@ Hecho por:
 
 
 Univerdidad Michoacana de San Nicolás de Hidalgo
+![](../Imagenes/Escudoum.jpg)
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-AEsvi0CFmM6Blq_wM67EJKaDQS7_KEf-4wd9U1J9jqs-oAGip3InqKyKBx0z76wGKFEAtRb9kiKBexyQCZSIE0PC7f-F00I5KqPXn1UL4t8RzDd3qcPsoIRYRi2pqRaIvjppNLAWdkI/s1600/Escudo+UMSNH.jpg)
 
 ```{r setup, include=FALSE}
 library(plotly)
 library(tidyverse)
 library(lubridate)
+#Librería para gráficar Matrices de correlación_
+library(corrplot)
 # Librería de Yahoo Finance para descargar datos:
 source("https://raw.githubusercontent.com/OscarVDelatorreTorres/yahooFinance/main/datosMultiplesYahooFinance.R")
 ```
@@ -67,6 +70,7 @@ De estos, con el rendimiento contínuo y el P/L haga una tabla de resumen (para 
   -Quantil 5%
   
   -Quantil 95%
+  
   -Maximo
   
   -Mínimo
@@ -177,65 +181,105 @@ fig1
 Haga una matriz de dispersión (https://plotly.com/r/splom/).
 
 ```{r}
-figScatter=plot_ly(type="splom",
-                   dimensions=list(
-                     list(label="ALFAA.MX", values=Datos$tablaRendimientosCont$ALFAA.MX),
-                     list(label="BIMBOA.MX", values=Datos$tablaRendimientosCont$BIMBOA.MX),
-                     list(label="GFNORTEO.MX", values=Datos$tablaRendimientosCont$GFNORTEO.MX),
-                     list(label="GRUMAB.MX", values=Datos$tablaRendimientosCont$GRUMAB.MX),
-                     list(label="LACOMERUBC.MX", values=Datos$tablaRendimientosCont$LACOMERUBC.MX),
-                     list(label="VOLARA.MX", values=Datos$tablaRendimientosCont$VOLARA.MX),
-                     list(label="AAPL", values=Datos$tablaRendimientosCont$AAPL),
-                     list(label="GOOGL", values=Datos$tablaRendimientosCont$GOOGL),
-                     list(label="META", values=Datos$tablaRendimientosCont$META),
-                     list(label="GRMN", values=Datos$tablaRendimientosCont$GRMN),
-                     list(label="ARKF", values=Datos$tablaRendimientosCont$ARKF),
-                     list(label="ARKX", values=Datos$tablaRendimientosCont$ARKX),
-                     list(label="^MXX", values=Datos$tablaRendimientosCont$MXX),
-                     list(label="^DJI", values=Datos$tablaRendimientosCont$DJI),
-                     list(label="^GSPC", values=Datos$tablaRendimientosCont$GSPC),
-                     list(label="WTI", values=Datos$tablaRendimientosCont$WTI),
-                     list(label="ZC=F", values=Datos$tablaRendimientosCont$ZCF),
-                     list(label="GC=F", values=Datos$tablaRendimientosCont$GCF),
-                     list(label="SB=F", values=Datos$tablaRendimientosCont$SBF)
-                   ),
-                   marker=list(size=3,
-                               color='rgba(0, 0, 255, 0.5)',
-                               line=list(width=1,
-                                         color='rgb(0, 0, 0)')),
-                   diagonal=list(visible=FALSE)
-                   ) %>%
-  layout(title="Matriz de dispersión de los rendimientos contínuos")
-
-
-figScatter
+##figScatter=plot_ly(type="splom",
+#                    dimensions=list(
+#                      list(label="ALFAA.MX", values=Datos$tablaRendimientosCont$ALFAA.MX),
+#                      list(label="BIMBOA.MX", values=Datos$tablaRendimientosCont$BIMBOA.MX),
+#                      list(label="GFNORTEO.MX", values=Datos$tablaRendimientosCont$GFNORTEO.MX),
+#                      list(label="GRUMAB.MX", values=Datos$tablaRendimientosCont$GRUMAB.MX),
+#                      list(label="LACOMERUBC.MX", values=Datos$tablaRendimientosCont$LACOMERUBC.MX),
+#                      list(label="VOLARA.MX", values=Datos$tablaRendimientosCont$VOLARA.MX),
+#                      list(label="AAPL", values=Datos$tablaRendimientosCont$AAPL),
+#                      list(label="GOOGL", values=Datos$tablaRendimientosCont$GOOGL),
+#                      list(label="META", values=Datos$tablaRendimientosCont$META),
+#                      list(label="GRMN", values=Datos$tablaRendimientosCont$GRMN),
+#                      list(label="ARKF", values=Datos$tablaRendimientosCont$ARKF),
+#                      list(label="ARKX", values=Datos$tablaRendimientosCont$ARKX),
+#                      list(label="^MXX", values=Datos$tablaRendimientosCont$MXX),
+#                      list(label="^DJI", values=Datos$tablaRendimientosCont$DJI),
+#                      list(label="^GSPC", values=Datos$tablaRendimientosCont$GSPC),
+#                      list(label="WTI", values=Datos$tablaRendimientosCont$WTI),
+#                      list(label="ZC=F", values=Datos$tablaRendimientosCont$ZCF),
+#                      list(label="GC=F", values=Datos$tablaRendimientosCont$GCF),
+#                      list(label="SB=F", values=Datos$tablaRendimientosCont$SBF)
+#                    ),
+#                    marker=list(size=3,
+#                                color='rgba(0, 0, 255, 0.5)',
+#                                line=list(width=1,
+#                                          color='rgb(0, 0, 0)')),
+#                    diagonal=list(visible=FALSE)
+#                    ) %>%
+#   layout(title="Matriz de dispersión de los rendimientos contínuos")
+# 
+# 
+# figScatter
 
 ```
+```{r}
+# figScatt = pairs(Datos$tablaPL[,-1], main = "Matriz de dispersión de los rendimientos contínuos")
+
+```
+
+
 
 ## Covarianzas y correlaciones:
 
 Covarianzas de los rendimientos:
 ```{r}
-covarianzas=cov(Datos$tablaRendimientosCont[,-1])
-covarianzas
+covarianzasRC=cov(Datos$tablaRendimientosCont[,-1])
+covarianzasRC
 ```
+```{r}
+
+covarianzasPL=cov(Datos$tablaPL[,-1])
+covarianzasPL
+
+```
+
+
+
 
 Correlaciones Pearson:
 ```{r}
-correlaciones=cor(Datos$tablaRendimientosCont[,-1])
-correlaciones
+correlacionesRC=cor(Datos$tablaRendimientosCont[,-1])
+correlacionesRC
 ```
+
+```{r}
+correlacionesPL=cor(Datos$tablaPL[,-1])
+correlacionesPL
+```
+
 
 Se hace un diagrama de calor (heatmap) de las covarianzas de los rendimientos:
 
 ```{r}
-fig3=plot_ly(x=colnames(covarianzas),
-             y=rownames(covarianzas),
-             z=as.matrix(covarianzas),
-             type="heatmap") %>%
-  layout(title="Matriz de covarianzas",
-         xaxis=list(title=""),
-         yaxis=list(title=""))
-fig3
+fig3a = corrplot(correlacionesRC, title = "Matriz de correlaciones Rendimientos")
 ```
+
+```{r}
+
+
+fig3b = corrplot(correlacionesPL, title = "Matriz de correlaciones P/L")
+
+```
+### Conclusiones
+
+Gracias al análisis estadístico descriptivo realizado, podemos sacar algunas de las siguientes concusiones:
+
+Si hubieramos invertido hace 3 años en las acciones análizadas sin hacer nigún movimiento, a dia de hoy el máximo rendimiento que hubieramos sacado sería el de META, y el que nos hubiera generado más perdidas sería el futuro en petroleo WIT.
+
+Sí se hubiera sacado el rendimiento el dia del mayor rendimiento reportado, meta queda en 2do lugar con 19.54%, mientras que Garmin nos hubiera proporcionado un 21.02%.
+
+El activo con mayor volatilidad es el futuro del petroleo, WTI, mientras que el menos volátil es el indicie bursátil IPC.
+                               
+Las acciones americanas en general tuvieron mejor desempeño que las mexicanas.
+
+Algunos de los activos analizados tienen una relación directa muy fuerte, como es el caso de los futuros del oro y Dow Jones, o los índices bursátiles Dow Jones y S&P500. 
+
+Vemos que el sector teconlógico, y en general las acciones americanas tienen una relación directa fuerte entre ellas, así como sus indices busatiles, y como es de esperarse, el IPC tiene una relación directa con los activos méxicanos.
+
+Hay una relación que probablemente sea espuria, que es el futuro del maíz y del oro, y que sería interesanre agregar 
+al análisis alguas pruebas de cointegración, para verificar que esta realción es real.
+
 
