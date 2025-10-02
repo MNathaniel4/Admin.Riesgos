@@ -36,7 +36,6 @@ Datos=historico_multiples_precios(tickers=tickerV,de=deD,hasta=hastaD,periodicid
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/VaR_mario_2.PNG)
 
 
-## 
 ```{r, include = FALSE}
 tablaResumenRendimientos=data.frame(Accion=names(Datos$tablaRendimientosCont)[-1],
                         Media = colMeans(Datos$tablaRendimientosCont[,-1]),
