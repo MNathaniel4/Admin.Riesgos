@@ -141,7 +141,7 @@ Equipo 3
 <section id="ejemplos-del-cálculo-del-var-de-un-portafólio" class="slide level2">
 <h2>Ejemplos del cálculo del VaR de un portafólio</h2>
 <ul>
-<li>Cálculo de rendimientos diariosra fines de ilustración, se calculara el VaR parametrico de un portafolio comupuesto por las acciónes de Grupo México, Televisa, CEMEX y Kimberly-Clark.</li>
+<li>Cálculo de rendimientos diarios a fines de ilustración, se calculara el VaR parametrico de un portafolio comupuesto por las acciónes de Grupo México, Televisa, CEMEX y Kimberly-Clark.</li>
 </ul>
 
 <img data-src="https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/VaR_mario_2.PNG" class="r-stretch"></section>
@@ -152,7 +152,7 @@ Equipo 3
 <section id="resultados" class="slide level2">
 <h2>Resultados</h2>
 <ul>
-<li><p>De aquí, los pesos que el modelo arroja los pesos adecuados que minimizan la varianza son: $ w = (0.2628, 0.0751, 0.1658, 0.4962)$</p></li>
+<li><p>De aquí, los pesos que el modelo arroja los pesos adecuados que minimizan la varianza son: <span class="math display">\[w = (0.2628, 0.0751, 0.1658, 0.4962)\]</span></p></li>
 <li><p>Que desenvoca en un rendimiento esperado de <span class="math inline">\(r_{port} =\sum w_i*E[r_i]=  0.0922\)</span> y una desviación estándar de <span class="math inline">\(\sigma_{port}= \sqrt{w´\Sigma w} = 1.1399\)</span> , siendo <span class="math inline">\(\Sigma\)</span> la matriz de covarianza.</p></li>
 </ul>
 </section>
@@ -162,16 +162,6 @@ Equipo 3
 <li>Con estos elementos procederemos al calculo del VaR paramétrico a un nivel de confianza del 95% y un horizonte de 10 días, de una suma invertida de $ 15,000.</li>
 </ul>
 <p><span class="math display">\[VaR_{parametrico} = - (q_{1-\alpha} * \sigma_{port} * \sqrt{h})*Valor\ invertido \]</span> <span class="math display">\[VaR_{parametrico} = - (1.96 * 0.0114 * \sqrt{10})*15,000 = 889.3968 \]</span></p>
-<p>```daj ## Rend_Cont = Datos$tablaRendimientosCont[,-1] colnames(Rend_Cont) &lt;- tickerV</p>
-<p>r_ts &lt;- as.timeSeries(Rend_Cont)</p>
-<p>spec &lt;- portfolioSpec() setSolver(spec) &lt;- “solveRquadprog”</p>
-<p>frontera &lt;- portfolioFrontier(r_ts, spec = spec)</p>
-<p>print(frontera) plot(frontera, 1) plot(frontera, 2) plot(frontera, 3)</p>
-</section>
-<section id="obtener-portafolio-de-tangencia-máximo-sharpe" class="title-slide slide level1 center">
-<h1>Obtener portafolio de tangencia (máximo Sharpe)</h1>
-<p>tg_portfolio &lt;- tangencyPortfolio(r_ts, spec = spec) print(tg_portfolio)</p>
-<p>```</p>
 
 </section>
     </div>
