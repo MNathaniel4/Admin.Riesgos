@@ -1,8 +1,218 @@
 ---
-title: "Matemática de portafolios acorde a Markowitz y el cálculo del VaR de un portafolio de acciones."
-author: "Equipo 3"
+title: "Matemática de Portafolios según H. Markowitz"
 format: revealjs
 ---
+
+## La teoría de portafolios
+
+-   Pionera en formalizar matemáticamente el concepto de diversificación de inversiones.
+
+-   Rendimiento esperado de un portafolio y su riesgo.
+
+-   Minimizar el riesgo para un nivel de rendimiento dado, o maximizar el rendimiento para un nivel de riesgo aceptado.
+
+Conceptos fundamentales:
+
+1.  Riesgo
+
+2.  Rendimiento
+
+## Rendimiento esperado de un activo y de un portafolio
+
+Rendimiento:
+
+-   Activo individual: Cambio en su valor, respecto a su valor inicial.
+
+-   Rendimiento esperado de portafolio: $$ E(R_p) = \sum_{i} w_i \, E(R_i) $$ Forma Matricial: $$ E(R_p) = w' E(r) $$\
+
+## Riesgo (Varianza o Volatilidad) de un portafolio
+
+Medido comunmente como la varianza $$ \sigma^{2} $$ o la desviación estándar $$ \sigma $$ de sus rendimientos.
+
+## Covarianza y Correlación
+
+$$ \sigma_{ij} $$ Mide la forma en que 2 activos diferentes se mueven juntos.
+
+-   (+) = Misma dirección, mayor riesgo
+
+-   (-) = Distinta dirección, menor riesgo total $$ \rho_{ij} $$ Estandariza la covarianza. Valor entre:
+
+-   -1: No beneficio.
+
+-   1: En teoría, crear un portafolio sin riesgo.
+
+## Formulación Matemática
+
+$$\sigma^2_p = w' V w $$ Varianza de un portafolio con n activos en notación matricial.
+
+| $$\sigma^2_p = w' V w $$ | Varianza del portafolio |
+|----|----|
+| $$w$$ | Vector columna de ponderaciones de los activos |
+| $$w'$$ | Vector traspuesto de las ponderaciones |
+| $$V$$ | Matriz de varianza-covarianza de rendimientos de activos |
+
+## El Problema de Markowitz y la Frontera Eficiente
+
+Minimizar $$\ w' V w   y   \Sigma w_i = 1$$
+
+Un inversor racional y averso al riesgo elegirá un portafolio que se encuentre sobre la Frontera Eficiente.
+
+## ![](WhatsApp Image 2025-10-02 at 10.57.29 AM.jpeg)
+
+## Valor en Riesgo (VaR)
+
+::::: columns
+::: {.column width="55%"}
+Medida estadística que cuantifica la pérdida máxima esperada en periodo de tiempo específico con nivel de confianza determinado.
+
+Formalmente: $$P(P_t - P_0 \le -VAR) = 1 - c $$
+:::
+
+::: {.column width="45%"}
+Donde: $$P_0$$ valor inicial del portafolio $$P_t$$ valor al tiempo t $$c$$ nivel de confianza
+:::
+:::::
+
+## Metodología para el cálculo de VaR
+
+Los 3 métodos para el cálculo de VaR:
+
+-   Modelo Paramétrico
+
+-   Modelo Histórico
+
+-   Simulaciones
+
+## Modelo Paramétrico
+
+Método derivado directamente del modelo de Markowitz. Se asume un modelo normal, por lo tanto:
+
+Sea 𝑤 el vector de pesos relativos de una cartera: $$w = (w_1, w_2, ...,w_n)$$ Sea 𝑟 el vector de rendimientos: $$𝑟 = (r_1,r_2,..., r_n)$$ Sea 𝑉 la matriz simétrica de 𝑛𝑥𝑛 de varianzas y covarianzas de rendimientos.
+
+## 
+
+Sea x la cantidad invertida en cada activo: $$x = (x_1, x_2,...,x_n)$$
+
+Y W la cantidad total invertida: $$W=\sum_{i=1}^{n} x_i$$
+
+De modo que: $$w_i= \frac{x_i}{W}$$
+
+## 
+
+Dada la definición anterior, la varianza por unidad: $$\sigma^2_p= w^{t}Vw$$ Por lo tanto, en términos de la inversión total W: $$\sigma^2_pW^2= x^{t}Vx$$ Al asumir que el rendimiento es normal 𝑟 ∼ 𝑁(µ,𝑉), ,la distribución de la cartera es: $$r_c∼N(\mu_c,\sigma^2_c),\mu_c= w^{T}\mu$$
+
+## 
+
+Definimos la pérdida como: $$L= W-W(1+r_c)=-Wr_c$$ La transformación lineal de una variable normal 𝑌=𝑎𝑋+𝑏 es otra variable aleatoria normalmente distribuida de la forma 𝑌∼𝑁(𝑎µ+𝑏,𝑎^2σ^2). Podemos definir la distribución de 𝐿 como: $$L∼𝑁(-W\mu_c,W^2\sigma^2_c)$$ Esto permite definir VaR a nivel de significancia *p* como cuartil superior de 𝐿 con probabilidad *p*: $$VaR_p=F^{-1}_L(1-p)$$
+
+## 
+
+::::: columns
+::: {.column width="50%"}
+Donde: $$𝐹^{-1}_p$$ es función inversa de distribución acumulada de pérdidas. Aplicada a un valor de probabilidad, devuelve valor de pérdida para dicha probabilidad de la FDA.
+:::
+
+::: {.column width="50%"}
+Ahora, para una normal de la forma $$𝑌 ∼ 𝑁(𝑚, 𝑠^2)$$ se tiene que: $$F^{-1}_Y(1-p)=m+s·z_{1-p}$$
+:::
+:::::
+
+## 
+
+::::: columns
+::: {.column width="55%"}
+⇒$$VaR_p=-W\mu_c+z_{1-p}W\sigma_c$$ Pero $$\mu_c=W^T\mu$$ y $$\sigma_c=\sqrt{w^{t}Vw}$$
+:::
+
+::: {.column width="45%"}
+Por lo tanto, usando la suposición habitual (tiempo≤1 día, media=0): µ=0. Reescribimos: $$VaR_p=z_{1-p}W\sqrt{w^{t}Vw}$$ $$=z_{1-p}\sqrt{x^{t}Vx}$$
+:::
+:::::
+
+## EJEMPLO TEORIA DE PORTAFOLIO DE MARKOWITZ
+
+## Riesgo y retorno esperado
+
+El cálculo del rendimiento esperado de una acción esta dado por su esperanza matemática decacuerdo con el modelo de Markowitz.
+
+Simulando posibles escenarios futuros para la acción de Qualitas (Q.MX):
+
+|          |          |              |             |
+|----------|----------|--------------|-------------|
+| Economía | Precio   | Probabilidad | Rendimiento |
+| Auge     | \$230.00 | 25%          | 41.59%      |
+| Esperado | \$191.90 | 50%          | 18.14%      |
+| Recesión | \$156.00 | 25%          | -3.95%      |
+
+: Qualitas Controladora, SAB De CV (Q.MX)
+
+## Retorno esperado
+
+El rendimiento esperado para Qualitas es estonces:
+
+$E(R_Q) = \sum_{i=0}^{n}p*X_i$
+
+$E(R_Q) = (0.25)*(0.4159)+(0.50)*(0.1814)+(0.25)*(-0.0395)$
+
+$E(R_Q) = 0.1848$
+
+## Riesgo esperado
+
+La desviación estándar vista bajo este modelo, es el riesgo del título a evaluar.
+
+$d_Q =\sigma_Q = 0.1610$
+
+## Para una cartera de dos activos:
+
+Para efectos de este ejemplo agregaremos los siguientes datos de la acción del Banco del Bajio (BBAJIOO.MX):
+
+-   $E(R_B)=0.2611$
+
+-   $\sigma_{B}^{2} = 0.0806$
+
+-   $\sigma_{B} = 0.2839$
+
+-   $Cov(Q,B)=0.02057$
+
+## Fórmula de Markowitz (% optimo)
+
+Utilizando la formula de markowitz se puede llegar al porcentaje(peso) exacto a invertir en cada activo para que el riesgo de la cartera de dos títulos sea el mínimo:
+
+$$w_Q = \frac{\sigma_B^2 - \text{Cov}(Q, B)}{\sigma_Q^2 + \sigma_B^2 - 2 \cdot \text{Cov}(Q, B)}$$ Sustituyendo nuestros valores tenemos que:
+
+$w_Q=0.918115$
+
+$w_B = 1- w_Q = 0.081843$
+
+Por lo tanto, para esta cartera, debemos invertir mas del 90% de nuestro capital en acciones de Qualitas.
+
+## 
+
+Ahora, para los demas valores esperados de nuestra cartera de dos activos:
+
+-   $E(R_p)= w_Q*E(R_Q)+w_B*E(R_B)$
+
+$E(R_p)= (0.918115)*(0.1848)+(0.081843)*(0.2611)$
+
+$E(R_p)=0.191036$
+
+## 
+
+-   $\sigma_p^2 = w_Q^2 \sigma_Q^2 + w_B^2 \sigma_B^2 + 2 w_Q w_B \text{Cov}(Q, B)$
+
+$\sigma_p^2 = (0.842935)*(0.025921)+(0.006698)*(0.0806)+2*(0.918115)*(0.081843)*(0.02057)$
+
+$\sigma_p^2 = 0.02547$
+
+$\sigma_p = \sqrt{0.02547} = 0.159593$
+
+Esto es que el riesgo de esta cartera es de 15.95% aproximadamente, valor que cimple con la hipotesis de Markowitz de que diversificar con dos activos de diferente correlación nos lleva a un menor riesgo de cartera que si invirtieramos en cada acción de forma independiente.
+
+$$\sigma_p < \sigma_Q < \sigma_B$$
+
+## Ejemplos del cálculo del VaR de un portafólio
+
+-   A fines de ilustración, se calculara el VaR parametrico de un portafolio comupuesto por las acciónes de Grupo México, Televisa, CEMEX y Kimberly-Clark.
 
 ```{r, include= FALSE}
 library(plotly)
@@ -29,12 +239,8 @@ Datos=historico_multiples_precios(tickers=tickerV,de=deD,hasta=hastaD,periodicid
 
 
 ```
-## Ejemplos del cálculo del VaR de un portafólio
-
--   A fines de ilustración, se calculara el VaR parametrico de un portafolio comupuesto por las acciónes de Grupo México, Televisa, CEMEX y Kimberly-Clark.
 
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/VaR_mario_2.PNG)
-
 
 ```{r, include = FALSE}
 tablaResumenRendimientos=data.frame(Accion=names(Datos$tablaRendimientosCont)[-1],
@@ -77,7 +283,7 @@ tablaResumenRendimientos %>%
 
 ## Cálculo del portafolio de mínima varianza
 
-```{r, include = FALSE} 
+```{r, include = FALSE}
 
 # Enfoque de  prgramación cuadraica
 
@@ -105,18 +311,16 @@ tablaResumenRendimientos %>%
 ![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/VaR_mario_1.PNG)
 
 ## Resultados
--   De aquí, los pesos que el modelo arroja los pesos adecuados que minimizan la varianza son: 
-$$w = (0.2628, 0.0751, 0.1658, 0.4962)$$
 
-- Que desenvoca en un rendimiento esperado de  $r_{port} =\sum w_i*E[r_i]=  0.0922$ y una desviación estándar de $\sigma_{port}= \sqrt{w´\Sigma w} = 1.1399$ , siendo $\Sigma$ la matriz de covarianza.
+-   De aquí, los pesos que el modelo arroja los pesos adecuados que minimizan la varianza son: $$w = (0.2628, 0.0751, 0.1658, 0.4962)$$
 
+-   Que desenvoca en un rendimiento esperado de $r_{port} =\sum w_i*E[r_i]=  0.0922$ y una desviación estándar de $\sigma_{port}= \sqrt{w´\Sigma w} = 1.1399$ , siendo $\Sigma$ la matriz de covarianza.
 
 ## Cálculo del VaR paramétrico del portafolio
-- Con estos elementos procederemos al calculo del VaR paramétrico a un nivel de confianza del 95% y un horizonte de 10 días, de una suma invertida de \$ 15,000.
 
+-   Con estos elementos procederemos al calculo del VaR paramétrico a un nivel de confianza del 95% y un horizonte de 10 días, de una suma invertida de \$ 15,000.
 
-$$VaR_{parametrico} = - (q_{1-\alpha} * \sigma_{port} * \sqrt{h})*Valor\ invertido $$
-$$VaR_{parametrico} = - (1.645 * 0.0114 * \sqrt{10})*15,000 = 889.3968 $$
+$$VaR_{parametrico} = - (q_{1-\alpha} * \sigma_{port} * \sqrt{h})*Valor\ invertido $$ $$VaR_{parametrico} = - (1.645 * 0.0114 * \sqrt{10})*15,000 = 889.3968 $$
 
 ```{r, include= FALSE}
 # alpha = 0.05
@@ -124,5 +328,3 @@ $$VaR_{parametrico} = - (1.645 * 0.0114 * \sqrt{10})*15,000 = 889.3968 $$
 # VaR_parametrico = 15000 *-((qnorm(1-alpha)*sigma_port*sqrt(h))/100)
 
 ```
-
-

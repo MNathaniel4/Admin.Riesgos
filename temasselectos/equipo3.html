@@ -9,8 +9,7 @@
 <link href="equipo3_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.32">
 
-  <meta name="author" content="Equipo 3">
-  <title>Matemática de portafolios acorde a Markowitz y el cálculo del VaR de un portafolio de acciones.</title>
+  <title>Matemática de Portafolios según H. Markowitz</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,21 +126,229 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Matemática de portafolios acorde a Markowitz y el cálculo del VaR de un portafolio de acciones.</h1>
+  <h1 class="title">Matemática de Portafolios según H. Markowitz</h1>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Equipo 3 
-</div>
-</div>
 </div>
 
+</section>
+<section id="la-teoría-de-portafolios" class="slide level2">
+<h2>La teoría de portafolios</h2>
+<ul>
+<li><p>Pionera en formalizar matemáticamente el concepto de diversificación de inversiones.</p></li>
+<li><p>Rendimiento esperado de un portafolio y su riesgo.</p></li>
+<li><p>Minimizar el riesgo para un nivel de rendimiento dado, o maximizar el rendimiento para un nivel de riesgo aceptado.</p></li>
+</ul>
+<p>Conceptos fundamentales:</p>
+<ol type="1">
+<li><p>Riesgo</p></li>
+<li><p>Rendimiento</p></li>
+</ol>
+</section>
+<section id="rendimiento-esperado-de-un-activo-y-de-un-portafolio" class="slide level2">
+<h2>Rendimiento esperado de un activo y de un portafolio</h2>
+<p>Rendimiento:</p>
+<ul>
+<li><p>Activo individual: Cambio en su valor, respecto a su valor inicial.</p></li>
+<li><p>Rendimiento esperado de portafolio: <span class="math display">\[ E(R_p) = \sum_{i} w_i \, E(R_i) \]</span> Forma Matricial: <span class="math display">\[ E(R_p) = w' E(r) \]</span><br>
+</p></li>
+</ul>
+</section>
+<section id="riesgo-varianza-o-volatilidad-de-un-portafolio" class="slide level2">
+<h2>Riesgo (Varianza o Volatilidad) de un portafolio</h2>
+<p>Medido comunmente como la varianza <span class="math display">\[ \sigma^{2} \]</span> o la desviación estándar <span class="math display">\[ \sigma \]</span> de sus rendimientos.</p>
+</section>
+<section id="covarianza-y-correlación" class="slide level2">
+<h2>Covarianza y Correlación</h2>
+<p><span class="math display">\[ \sigma_{ij} \]</span> Mide la forma en que 2 activos diferentes se mueven juntos.</p>
+<ul>
+<li><p>(+) = Misma dirección, mayor riesgo</p></li>
+<li><p>(-) = Distinta dirección, menor riesgo total <span class="math display">\[ \rho_{ij} \]</span> Estandariza la covarianza. Valor entre:</p></li>
+<li><p>-1: No beneficio.</p></li>
+<li><p>1: En teoría, crear un portafolio sin riesgo.</p></li>
+</ul>
+</section>
+<section id="formulación-matemática" class="slide level2">
+<h2>Formulación Matemática</h2>
+<p><span class="math display">\[\sigma^2_p = w' V w \]</span> Varianza de un portafolio con n activos en notación matricial.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th><span class="math display">\[\sigma^2_p = w' V w \]</span></th>
+<th>Varianza del portafolio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math display">\[w\]</span></td>
+<td>Vector columna de ponderaciones de los activos</td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[w'\]</span></td>
+<td>Vector traspuesto de las ponderaciones</td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[V\]</span></td>
+<td>Matriz de varianza-covarianza de rendimientos de activos</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="el-problema-de-markowitz-y-la-frontera-eficiente" class="slide level2">
+<h2>El Problema de Markowitz y la Frontera Eficiente</h2>
+<p>Minimizar <span class="math display">\[\ w' V w   y   \Sigma w_i = 1\]</span></p>
+<p>Un inversor racional y averso al riesgo elegirá un portafolio que se encuentre sobre la Frontera Eficiente.</p>
+</section>
+<section id="section" class="slide level2">
+<h2><img data-src="WhatsApp%20Image%202025-10-02%20at%2010.57.29%20AM.jpeg"></h2>
+</section>
+<section id="valor-en-riesgo-var" class="slide level2">
+<h2>Valor en Riesgo (VaR)</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>Medida estadística que cuantifica la pérdida máxima esperada en periodo de tiempo específico con nivel de confianza determinado.</p>
+<p>Formalmente: <span class="math display">\[P(P_t - P_0 \le -VAR) = 1 - c \]</span></p>
+</div><div class="column" style="width:45%;">
+<p>Donde: <span class="math display">\[P_0\]</span> valor inicial del portafolio <span class="math display">\[P_t\]</span> valor al tiempo t <span class="math display">\[c\]</span> nivel de confianza</p>
+</div></div>
+</section>
+<section id="metodología-para-el-cálculo-de-var" class="slide level2">
+<h2>Metodología para el cálculo de VaR</h2>
+<p>Los 3 métodos para el cálculo de VaR:</p>
+<ul>
+<li><p>Modelo Paramétrico</p></li>
+<li><p>Modelo Histórico</p></li>
+<li><p>Simulaciones</p></li>
+</ul>
+</section>
+<section id="modelo-paramétrico" class="slide level2">
+<h2>Modelo Paramétrico</h2>
+<p>Método derivado directamente del modelo de Markowitz. Se asume un modelo normal, por lo tanto:</p>
+<p>Sea 𝑤 el vector de pesos relativos de una cartera: <span class="math display">\[w = (w_1, w_2, ...,w_n)\]</span> Sea 𝑟 el vector de rendimientos: <span class="math display">\[𝑟 = (r_1,r_2,..., r_n)\]</span> Sea 𝑉 la matriz simétrica de 𝑛𝑥𝑛 de varianzas y covarianzas de rendimientos.</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p>Sea x la cantidad invertida en cada activo: <span class="math display">\[x = (x_1, x_2,...,x_n)\]</span></p>
+<p>Y W la cantidad total invertida: <span class="math display">\[W=\sum_{i=1}^{n} x_i\]</span></p>
+<p>De modo que: <span class="math display">\[w_i= \frac{x_i}{W}\]</span></p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p>Dada la definición anterior, la varianza por unidad: <span class="math display">\[\sigma^2_p= w^{t}Vw\]</span> Por lo tanto, en términos de la inversión total W: <span class="math display">\[\sigma^2_pW^2= x^{t}Vx\]</span> Al asumir que el rendimiento es normal 𝑟 ∼ 𝑁(µ,𝑉), ,la distribución de la cartera es: <span class="math display">\[r_c∼N(\mu_c,\sigma^2_c),\mu_c= w^{T}\mu\]</span></p>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p>Definimos la pérdida como: <span class="math display">\[L= W-W(1+r_c)=-Wr_c\]</span> La transformación lineal de una variable normal 𝑌=𝑎𝑋+𝑏 es otra variable aleatoria normalmente distribuida de la forma 𝑌∼𝑁(𝑎µ+𝑏,𝑎<sup>2σ</sup>2). Podemos definir la distribución de 𝐿 como: <span class="math display">\[L∼𝑁(-W\mu_c,W^2\sigma^2_c)\]</span> Esto permite definir VaR a nivel de significancia <em>p</em> como cuartil superior de 𝐿 con probabilidad <em>p</em>: <span class="math display">\[VaR_p=F^{-1}_L(1-p)\]</span></p>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Donde: <span class="math display">\[𝐹^{-1}_p\]</span> es función inversa de distribución acumulada de pérdidas. Aplicada a un valor de probabilidad, devuelve valor de pérdida para dicha probabilidad de la FDA.</p>
+</div><div class="column" style="width:50%;">
+<p>Ahora, para una normal de la forma <span class="math display">\[𝑌 ∼ 𝑁(𝑚, 𝑠^2)\]</span> se tiene que: <span class="math display">\[F^{-1}_Y(1-p)=m+s·z_{1-p}\]</span></p>
+</div></div>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>⇒<span class="math display">\[VaR_p=-W\mu_c+z_{1-p}W\sigma_c\]</span> Pero <span class="math display">\[\mu_c=W^T\mu\]</span> y <span class="math display">\[\sigma_c=\sqrt{w^{t}Vw}\]</span></p>
+</div><div class="column" style="width:45%;">
+<p>Por lo tanto, usando la suposición habitual (tiempo≤1 día, media=0): µ=0. Reescribimos: <span class="math display">\[VaR_p=z_{1-p}W\sqrt{w^{t}Vw}\]</span> <span class="math display">\[=z_{1-p}\sqrt{x^{t}Vx}\]</span></p>
+</div></div>
+</section>
+<section id="ejemplo-teoria-de-portafolio-de-markowitz" class="slide level2">
+<h2>EJEMPLO TEORIA DE PORTAFOLIO DE MARKOWITZ</h2>
+</section>
+<section id="riesgo-y-retorno-esperado" class="slide level2">
+<h2>Riesgo y retorno esperado</h2>
+<p>El cálculo del rendimiento esperado de una acción esta dado por su esperanza matemática decacuerdo con el modelo de Markowitz.</p>
+<p>Simulando posibles escenarios futuros para la acción de Qualitas (Q.MX):</p>
+<table class="caption-top">
+<caption>Qualitas Controladora, SAB De CV (Q.MX)</caption>
+<tbody>
+<tr class="odd">
+<td>Economía</td>
+<td>Precio</td>
+<td>Probabilidad</td>
+<td>Rendimiento</td>
+</tr>
+<tr class="even">
+<td>Auge</td>
+<td>$230.00</td>
+<td>25%</td>
+<td>41.59%</td>
+</tr>
+<tr class="odd">
+<td>Esperado</td>
+<td>$191.90</td>
+<td>50%</td>
+<td>18.14%</td>
+</tr>
+<tr class="even">
+<td>Recesión</td>
+<td>$156.00</td>
+<td>25%</td>
+<td>-3.95%</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="retorno-esperado" class="slide level2">
+<h2>Retorno esperado</h2>
+<p>El rendimiento esperado para Qualitas es estonces:</p>
+<p><span class="math inline">\(E(R_Q) = \sum_{i=0}^{n}p*X_i\)</span></p>
+<p><span class="math inline">\(E(R_Q) = (0.25)*(0.4159)+(0.50)*(0.1814)+(0.25)*(-0.0395)\)</span></p>
+<p><span class="math inline">\(E(R_Q) = 0.1848\)</span></p>
+</section>
+<section id="riesgo-esperado" class="slide level2">
+<h2>Riesgo esperado</h2>
+<p>La desviación estándar vista bajo este modelo, es el riesgo del título a evaluar.</p>
+<p><span class="math inline">\(d_Q =\sigma_Q = 0.1610\)</span></p>
+</section>
+<section id="para-una-cartera-de-dos-activos" class="slide level2">
+<h2>Para una cartera de dos activos:</h2>
+<p>Para efectos de este ejemplo agregaremos los siguientes datos de la acción del Banco del Bajio (BBAJIOO.MX):</p>
+<ul>
+<li><p><span class="math inline">\(E(R_B)=0.2611\)</span></p></li>
+<li><p><span class="math inline">\(\sigma_{B}^{2} = 0.0806\)</span></p></li>
+<li><p><span class="math inline">\(\sigma_{B} = 0.2839\)</span></p></li>
+<li><p><span class="math inline">\(Cov(Q,B)=0.02057\)</span></p></li>
+</ul>
+</section>
+<section id="fórmula-de-markowitz-optimo" class="slide level2">
+<h2>Fórmula de Markowitz (% optimo)</h2>
+<p>Utilizando la formula de markowitz se puede llegar al porcentaje(peso) exacto a invertir en cada activo para que el riesgo de la cartera de dos títulos sea el mínimo:</p>
+<p><span class="math display">\[w_Q = \frac{\sigma_B^2 - \text{Cov}(Q, B)}{\sigma_Q^2 + \sigma_B^2 - 2 \cdot \text{Cov}(Q, B)}\]</span> Sustituyendo nuestros valores tenemos que:</p>
+<p><span class="math inline">\(w_Q=0.918115\)</span></p>
+<p><span class="math inline">\(w_B = 1- w_Q = 0.081843\)</span></p>
+<p>Por lo tanto, para esta cartera, debemos invertir mas del 90% de nuestro capital en acciones de Qualitas.</p>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<p>Ahora, para los demas valores esperados de nuestra cartera de dos activos:</p>
+<ul>
+<li><span class="math inline">\(E(R_p)= w_Q*E(R_Q)+w_B*E(R_B)\)</span></li>
+</ul>
+<p><span class="math inline">\(E(R_p)= (0.918115)*(0.1848)+(0.081843)*(0.2611)\)</span></p>
+<p><span class="math inline">\(E(R_p)=0.191036\)</span></p>
+</section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<ul>
+<li><span class="math inline">\(\sigma_p^2 = w_Q^2 \sigma_Q^2 + w_B^2 \sigma_B^2 + 2 w_Q w_B \text{Cov}(Q, B)\)</span></li>
+</ul>
+<p><span class="math inline">\(\sigma_p^2 = (0.842935)*(0.025921)+(0.006698)*(0.0806)+2*(0.918115)*(0.081843)*(0.02057)\)</span></p>
+<p><span class="math inline">\(\sigma_p^2 = 0.02547\)</span></p>
+<p><span class="math inline">\(\sigma_p = \sqrt{0.02547} = 0.159593\)</span></p>
+<p>Esto es que el riesgo de esta cartera es de 15.95% aproximadamente, valor que cimple con la hipotesis de Markowitz de que diversificar con dos activos de diferente correlación nos lleva a un menor riesgo de cartera que si invirtieramos en cada acción de forma independiente.</p>
+<p><span class="math display">\[\sigma_p &lt; \sigma_Q &lt; \sigma_B\]</span></p>
 </section>
 <section id="ejemplos-del-cálculo-del-var-de-un-portafólio" class="slide level2">
 <h2>Ejemplos del cálculo del VaR de un portafólio</h2>
 <ul>
-<li>Cálculo de rendimientos diarios a fines de ilustración, se calculara el VaR parametrico de un portafolio comupuesto por las acciónes de Grupo México, Televisa, CEMEX y Kimberly-Clark.</li>
+<li>A fines de ilustración, se calculara el VaR parametrico de un portafolio comupuesto por las acciónes de Grupo México, Televisa, CEMEX y Kimberly-Clark.</li>
 </ul>
 
 <img data-src="https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/VaR_mario_2.PNG" class="r-stretch"></section>
@@ -161,7 +368,7 @@ Equipo 3
 <ul>
 <li>Con estos elementos procederemos al calculo del VaR paramétrico a un nivel de confianza del 95% y un horizonte de 10 días, de una suma invertida de $ 15,000.</li>
 </ul>
-<p><span class="math display">\[VaR_{parametrico} = - (q_{1-\alpha} * \sigma_{port} * \sqrt{h})*Valor\ invertido \]</span> <span class="math display">\[VaR_{parametrico} = - (1.96 * 0.0114 * \sqrt{10})*15,000 = 889.3968 \]</span></p>
+<p><span class="math display">\[VaR_{parametrico} = - (q_{1-\alpha} * \sigma_{port} * \sqrt{h})*Valor\ invertido \]</span> <span class="math display">\[VaR_{parametrico} = - (1.645 * 0.0114 * \sqrt{10})*15,000 = 889.3968 \]</span></p>
 
 </section>
     </div>
