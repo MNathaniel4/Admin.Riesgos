@@ -33,9 +33,11 @@ Datos=historico_multiples_precios(tickers=tickerV,de=deD,hasta=hastaD,periodicid
 
 -   Cálculo de rendimientos diariosra fines de ilustración, se calculara el VaR parametrico de un portafolio comupuesto por las acciónes de Grupo México, Televisa, CEMEX y Kimberly-Clark.
 
+![](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/VaR_mario_2.PNG)
+
 
 ## 
-```{r, echo = FALSE}
+```{r, include = FALSE}
 tablaResumenRendimientos=data.frame(Accion=names(Datos$tablaRendimientosCont)[-1],
                         Media = colMeans(Datos$tablaRendimientosCont[,-1]),
                         Mediana = apply(Datos$tablaRendimientosCont[,-1],2,median),
@@ -109,6 +111,8 @@ $ w = (0.2628, 0.0751, 0.1658, 0.4962)$
 
 - Que desenvoca en un rendimiento esperado de  $r_{port} =\sum w_i*E[r_i]=  0.0922$ y una desviación estándar de $\sigma_{port}= \sqrt{w´\Sigma w} = 1.1399$ , siendo $\Sigma$ la matriz de covarianza.
 
+
+## Cálculo del VaR paramétrico del portafolio
 - Con estos elementos procederemos al calculo del VaR paramétrico a un nivel de confianza del 95% y un horizonte de 10 días, de una suma invertida de \$ 15,000.
 
 
