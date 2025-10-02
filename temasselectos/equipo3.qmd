@@ -1,0 +1,132 @@
+---
+title: "Matemática de portafolios acorde a Markowitz y el cálculo del VaR de un portafolio de acciones."
+author: "Equipo 3"
+format: revealjs
+---
+
+```{r, include= FALSE}
+library(plotly)
+library(tidyverse)
+library(lubridate)
+library(quadprog)
+library(fPortfolio)
+library(gt)
+library(dplyr)
+# Librería de Yahoo Finance para descargar datos:
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/yahooFinance/main/datosMultiplesYahooFinance.R")
+
+
+tickerV=c("GMEXICOB.MX","TLEVISACPO.MX","CEMEXCPO.MX","KIMBERA.MX")
+deD=Sys.Date()-365
+hastaD=Sys.Date()
+per="D"
+paridadFX="USDMXN=X"
+convertirFX=c(FALSE,FALSE,FALSE,FALSE)
+
+Datos=historico_multiples_precios(tickers=tickerV,de=deD,hasta=hastaD,periodicidad=per,fxRate=paridadFX,whichToFX=convertirFX)
+
+
+
+
+```
+## Ejemplos del cálculo del VaR de un portafólio
+
+-   Cálculo de rendimientos diariosra fines de ilustración, se calculara el VaR parametrico de un portafolio comupuesto por las acciónes de Grupo México, Televisa, CEMEX y Kimberly-Clark.
+
+
+## 
+```{r, echo = FALSE}
+tablaResumenRendimientos=data.frame(Accion=names(Datos$tablaRendimientosCont)[-1],
+                        Media = colMeans(Datos$tablaRendimientosCont[,-1]),
+                        Mediana = apply(Datos$tablaRendimientosCont[,-1],2,median),
+                        DesviacionEstandar=apply(Datos$tablaRendimientosCont[,-1],2,sd),
+                        q5=apply(Datos$tablaRendimientosCont[,-1],2, quantile, probs =0.05),
+                        q95=apply(Datos$tablaRendimientosCont[,-1],2, quantile, probs=0.95),
+                        max=apply(Datos$tablaRendimientosCont[,-1],2,max),
+                        min=apply(Datos$tablaRendimientosCont[,-1],2,min))
+
+
+tablaResumenRendimientos %>%
+  gt() %>%
+  tab_header(
+    title = "Resumen estadistico de cada acción",
+    subtitle = paste0("Infomración del ",deD, " al ", hastaD)
+  ) %>%
+  fmt_number(
+    columns = names(tablaResumenRendimientos[-1]),
+    decimals = 2
+  ) %>%
+  cols_label( Accion = "Acción",
+              Media = "Media",
+              Mediana = "Mediana",
+              DesviacionEstandar = "Desviación Estándar",
+              q5 = "Percentil 5%",
+              q95 = "Percentil 95%",
+              max = "Máximo",
+              min = "Mínimo"
+  ) %>%
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) %>%
+  tab_source_note("Cifras en porcentaje(%)")
+
+
+```
+
+## Cálculo del portafolio de mínima varianza
+
+```{r} 
+
+# Enfoque de  prgramación cuadraica
+
+# mu =colMeans(Datos$tablaRendimientosCont[,-1])
+# sigma = cov(Datos$tablaRendimientosCont[,-1])
+# 
+# 
+# Dmat <- 2*sigma
+# dvec <- rep(0, ncol(sigma))
+# 
+# Amat <- cbind(rep(1, ncol(sigma)), diag(ncol(sigma)))
+# bvec <- c(1, rep(0, ncol(sigma)))
+# 
+# res <- solve.QP(Dmat, dvec, Amat, bvec, meq=1)
+# 
+# w = res$solution
+# 
+# 
+# r_port = sum(w * mu)
+# sigma_port = sqrt(t(w) %*% sigma %*% w)
+# sigma_port = sigma_port[1,1]
+
+```
+
+-   De aquí, los pesos que el modelo arroja son: 
+$ w = (0.2628, 0.0751, 0.1658, 0.4962)$
+
+- Que desenvoca en un rendimiento esperado de  $r_{port} =\sum w_i*E[r_i]=  0.0922$ y una desviación estándar de $ \sigma_{port}= \sqrt{w´\Sigma w} = 1.1399$ , siendo $\simga$ la matriz de covarianza.
+
+
+
+```{r} ##
+Rend_Cont = Datos$tablaRendimientosCont[,-1]
+colnames(Rend_Cont) <- tickerV
+
+r_ts <- as.timeSeries(Rend_Cont)
+
+spec <- portfolioSpec()
+setSolver(spec) <- "solveRquadprog"
+
+frontera <- portfolioFrontier(r_ts, spec = spec)
+
+print(frontera)
+plot(frontera, 1)
+plot(frontera, 2)
+plot(frontera, 3)
+
+# Obtener portafolio de tangencia (máximo Sharpe)
+tg_portfolio <- tangencyPortfolio(r_ts, spec = spec)
+print(tg_portfolio)
+
+```
+
