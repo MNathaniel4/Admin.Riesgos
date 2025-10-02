@@ -145,9 +145,6 @@ Equipo 3
 </ul>
 
 <img data-src="https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/VaR_mario_2.PNG" class="r-stretch"></section>
-<section id="section" class="slide level2">
-<h2></h2>
-</section>
 <section id="cálculo-del-portafolio-de-mínima-varianza" class="slide level2">
 <h2>Cálculo del portafolio de mínima varianza</h2>
 
@@ -165,7 +162,7 @@ Equipo 3
 <li>Con estos elementos procederemos al calculo del VaR paramétrico a un nivel de confianza del 95% y un horizonte de 10 días, de una suma invertida de $ 15,000.</li>
 </ul>
 <p><span class="math display">\[VaR_{parametrico} = - (q_{1-\alpha} * \sigma_{port} * \sqrt{h})*Valor\ invertido \]</span> <span class="math display">\[VaR_{parametrico} = - (1.96 * 0.0114 * \sqrt{10})*15,000 = 889.3968 \]</span></p>
-<p>```kuf ## Rend_Cont = Datos$tablaRendimientosCont[,-1] colnames(Rend_Cont) &lt;- tickerV</p>
+<p>```daj ## Rend_Cont = Datos$tablaRendimientosCont[,-1] colnames(Rend_Cont) &lt;- tickerV</p>
 <p>r_ts &lt;- as.timeSeries(Rend_Cont)</p>
 <p>spec &lt;- portfolioSpec() setSolver(spec) &lt;- “solveRquadprog”</p>
 <p>frontera &lt;- portfolioFrontier(r_ts, spec = spec)</p>
