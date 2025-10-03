@@ -9,7 +9,9 @@ format:
       toc: TRUE
       toc-depth: 4
 
+
 ---
+[Presentación](https://mnathaniel4.github.io/Admin.Riesgos/temasselectos/pp)
 
 \
 
@@ -40,7 +42,6 @@ Hecho por:
 
 [^4]: 1825934f\@umich.mx
 
-![Presentación](https://mnathaniel4.github.io/Admin.Riesgos/temasselectos/pp)
 
 **Universidad Michoacana de San Nicolás de Hidalgo**
 
