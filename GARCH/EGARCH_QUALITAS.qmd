@@ -1,0 +1,187 @@
+---
+title: "Qualitas"
+author: "Equipo 3"
+format: html
+---
+
+```{r, include=FALSE}
+# Liberías de yahoo finance de Github:
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/yahooFinance/main/datosMultiplesYahooFinance.R")
+# Librerías de cuantificación de riesgos en Github:
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/riskManagementSuiteR/refs/heads/main/riskManagementSuiteFunctions.R")
+#librerias de econometría
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/principiosEconometria/refs/heads/main/libreriasEconometria.R")
+# Librerías de uso general:
+library(plotly)
+library(dplyr)
+library(tseries)
+library(quantmod)
+library(tidyverse)
+library(tibble)
+library(forecast)
+library(DT)
+library(rugarch)
+library(zoo)
+
+```
+
+## Extacción de datos históricos y cálculo de rendimientos continuos
+
+```{r, include=FALSE}
+# Se usa la función historico_multiples_precios que se descargo paara la extracción de los datos desde hoy a 3 años atrás.
+tickerV=c("Q.MX")
+deD=Sys.Date()-(3*365)
+hastaD=Sys.Date()
+per="D"
+paridadFX="USDMXN=X"
+convertirFX=c(FALSE)
+
+Datos=historico_multiples_precios(tickers=tickerV,de=deD,hasta=hastaD,periodicidad=per,fxRate=paridadFX,whichToFX=convertirFX)
+precios=Datos$tablaPrecios
+rendimientos=Datos$tablaRendimientosCont
+
+
+```
+
+## Ajuste de modelo EGARCH(1,1) con errores T
+
+El modelo EGARCH (Exponential GARCH) puede capturar asimetrías en la respuesta de la volatilidad a los choques del mercado. En otras palabras, el modelo EGARCH puede reflejar cómo la volatilidad tiende a aumentar más después de una caída significativa en los precios (un choque negativo) en comparación con un aumento similar en los precios (un choque positivo).
+
+Su formula general es:
+
+$$\ln(\sigma_t^2) = \omega + \beta \ln(\sigma_{t-1}^2) + \gamma\left(\left|\frac{\varepsilon_{t-1}}{\sigma_{t-1}}\right| - E\left|\frac{\varepsilon_{t-1}}{\sigma_{t-1}}\right|\right) + \alpha\frac{\varepsilon_{t-1}}{\sigma_{t-1}}$$
+
+Donde:
+
+-   $\omega$ es la varianza a largo plazo.
+
+-   $\beta$ mide la persistencia de la volatilidad.
+
+-   $\alpha$ captura el signo del shock.
+
+-   $\gamma$ la magintud en la respuesta de la volatilidad a los choques positivos y negativos.
+
+Las venajas que ofrece este modelo con respecto a los otros son:
+
+Al estimar la log-varianza las restricciones de los parametros ya no son necesarias, y por ende es más parsimonioso.
+
+El error estanadarizado, que es el cociente de los errores entre su desviación estandar, aunque orignialmente GED-distribuido, puede ser t, t asimetrica, normal, etc.
+
+El uso de errores T permite capturar mejor los eventos extremos en los rendimientos financieros, ya que la distribución T tiene colas más pesadas en comparación con la distribución normal. Esto significa que es más probable observar valores extremos (tanto positivos como negativos) en los datos, lo cual es común en los mercados financieros debido a eventos inesperados o volatilidad elevada.
+
+```{r}
+
+espec <- ugarchspec(variance.model = list(model = "eGARCH", 
+                                         garchOrder = c(1, 1)),
+                   mean.model = list(armaOrder = c(0, 0), include.mean = TRUE),
+                   distribution.model = "std")
+egarch_fit <- ugarchfit(spec = espec, data = rendimientos$Q.MX)
+
+spec <- ugarchspec(variance.model = list(model = "sGARCH", 
+                                         garchOrder = c(1, 1)),
+                   mean.model = list(armaOrder = c(0, 0), include.mean = TRUE),
+                   distribution.model = "norm")
+garch_fit <- ugarchfit(spec = spec, data = rendimientos$Q.MX)
+
+
+AIC.rugarch=function(object){
+  k= length(object@fit$coef)
+  llf=object@fit$LLH
+  aic=(2*k)-(2*llf)
+  return(aic)
+}
+
+
+AIC_comparativo = c( "E-G A R C H" = AIC.rugarch(egarch_fit),"G A R C H" = AIC.rugarch(garch_fit))
+
+cat("El criterio de infomación de Akaike para los modelos son:\n\n")
+AIC_comparativo
+
+```
+
+```{r}
+tabla_resultados <- egarch_fit@fit$matcoef
+tabla_resultados[, 1:4]
+tabla_resultados<- garch_fit@fit$matcoef
+tabla_resultados[, 1:4]
+```
+
+QQ - Plot para verificar que se ajusta mejor.
+
+```{r}
+plot(egarch_fit, which =9)
+```
+
+## Roll
+
+```{r, include=FALSE}
+ventana = 350
+
+suavExponMovil95=rollEWSigma(rendimientos$Q.MX,lambda=0.95,ventana=ventana)
+suavExponMovil98=rollEWSigma(rendimientos$Q.MX,lambda=0.98,ventana=ventana)
+garchMovil=rollGARCH(rendimientos$Q.MX,model="sGARCH",LLF="norm",garchOrder=c(1,1),ventana=ventana,arma=c(0,0),include.mean = FALSE,upDown=TRUE)
+egarchstdMovil=rollGARCH(rendimientos$Q.MX,model="eGARCH",LLF="std",garchOrder=c(1,1),ventana=ventana,arma=c(0,0),include.mean = FALSE,upDown=TRUE)
+egarchgedMovil=rollGARCH(rendimientos$Q.MX,model="eGARCH",LLF="ged",garchOrder=c(1,1),ventana=ventana,arma=c(0,0),include.mean = FALSE,upDown=TRUE)
+tablaVolatilidades=data.frame(Fecha=rendimientos$Date,
+           Volatilidad_GARCH=garchMovil,
+           Volatilidad_SE_95=suavExponMovil95,
+           Volatilidad_SE_98=suavExponMovil98,
+           Volatilidad_stdEGARCH=egarchstdMovil,
+           Volatilidad_gedEGARCH=egarchgedMovil)
+
+
+
+```
+
+# Comparación de modelos de volatilidad
+
+```{r}
+
+plot_ly() %>%
+  add_trace(data = tablaVolatilidades, x = ~Fecha, y = ~Volatilidad_GARCH,
+            type = "scatter", mode = "lines", name = "Volatilidad GARCH(1,1)") %>%
+  add_trace(data = tablaVolatilidades, x = ~Fecha, y = ~Volatilidad_SE_95,
+            type = "scatter", mode = "lines", name = "Volatilidad SE (λ=0.95)") %>%
+  add_trace(data = tablaVolatilidades, x = ~Fecha, y = ~Volatilidad_SE_98,
+            type = "scatter", mode = "lines", name = "Volatilidad SE (λ=0.98)") %>%
+  add_trace(data = tablaVolatilidades, x = ~Fecha, y = ~Volatilidad_stdEGARCH,
+            type = "scatter", mode = "lines", name = "Volatilidad EGARCH(1,1) T") %>%
+  add_trace(data = tablaVolatilidades, x = ~Fecha, y = ~Volatilidad_gedEGARCH,
+            type = "scatter", mode = "lines", name = "Volatilidad EGARCH(1,1) GED") %>%
+  layout(title = "Comparación de Modelos de Volatilidad",
+         xaxis = list(title = "Fecha"),
+         yaxis = list(title = "Volatilidad"),
+         hovermode = "x unified")
+```
+
+##Comparación Gráfica de Volatilidades, Precios y Rendimientos
+
+```{r}
+Serie_garch = plot_ly() %>% 
+    add_trace(data = tablaVolatilidades, x = ~Fecha, y= ~Volatilidad_GARCH,
+    type = "scatter", mode = "lines", name= "Garch", line = list(color = '#004400'))%>%
+    add_trace(data = tablaVolatilidades, x = ~Fecha, y = ~Volatilidad_SE_95,
+            type = "scatter", mode = "lines", name = "Volatilidad SE (λ=0.95)",line = list(color = '#333333')) %>%
+    add_trace(data = tablaVolatilidades, x = ~Fecha, y = ~Volatilidad_SE_98,
+            type = "scatter", mode = "lines", name = "Volatilidad SE (λ=0.98)",line = list(color = '#AAAAAA')) %>%
+   add_trace(data = tablaVolatilidades, x = ~Fecha, y= ~Volatilidad_stdEGARCH,
+    type = "scatter", mode = "lines", name= "Egarch con errores T", line = list(color = '#AAAA77'))
+  
+Serie_rendimientos = plot_ly() %>% 
+    add_trace(data = rendimientos, x = ~rendimientos$Date, y= ~rendimientos$Q.MX,
+    type = "scatter", mode = "lines", name= "Rendimientos ", line = list(color = '#1F3FAD'))
+  
+Serie_precios = plot_ly() %>% 
+    add_trace(data = precios, x = ~precios$Date, y= ~precios$Q.MX,
+    type = "scatter", mode = "lines", name= "Precio", line = list(color = '#A52A2A'))
+  
+
+Vizz = subplot(Serie_garch, Serie_precios, Serie_rendimientos,nrows =3, shareX = FALSE) %>%
+  layout(title= "Comparación Qualitas ",
+         yaxis = list(title = "Volatilidad (%)"),
+         yaxis2 = list(title = "Precio (MXN)"),
+         yaxis3 = list(title = "Rendimientos (%)")
+        )
+Vizz
+  
+```
