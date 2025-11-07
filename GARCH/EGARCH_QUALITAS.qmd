@@ -99,6 +99,8 @@ AIC_comparativo
 
 ```
 
+![AIC](./Imagenes/garch_1.PNG)
+
 ```{r}
 tabla_resultados <- egarch_fit@fit$matcoef
 tabla_resultados[, 1:4]
@@ -111,6 +113,8 @@ QQ - Plot para verificar que se ajusta mejor.
 ```{r}
 plot(egarch_fit, which =9)
 ```
+
+![AIC](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/garch1_5.jpg)
 
 ## Roll
 
@@ -153,6 +157,9 @@ plot_ly() %>%
          yaxis = list(title = "Volatilidad"),
          hovermode = "x unified")
 ```
+
+![AIC](https://raw.githubusercontent.com/MNathaniel4/Admin.Riesgos/refs/heads/main/Imagenes/garch2.PNG)
+
 
 ##Comparación Gráfica de Volatilidades, Precios y Rendimientos
 
