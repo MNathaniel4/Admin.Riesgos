@@ -2,15 +2,14 @@
 title: "Ensayo sobre Modelos de Volatilidad"
 author: "Mario Nathaniel de la Vega Ramirez"
 format: 
-    html:
-      toc: TRUE
-      toc-depth: 4
     pdf:  
       toc: TRUE
       toc-depth: 4
+   
 ---
 
-```{r}
+```{r, include = FALSE}
+load("Ensayo.RData")
 
 ```
 
@@ -62,7 +61,7 @@ Con esta breve recapitulación de las venajas y desvenajas se busca sostener que
 
 
 
-```{r, include=FALSE}
+```{r, echo=FALSE,include=FALSE}
 # Se usa la función historico_multiples_precios que se descargo paara la extracción de los datos desde hoy a 3 años atrás.
 tickerV=c("QQQ")
 deD="2023-11-20"
@@ -88,7 +87,7 @@ precios$r=c(NA,r)
 
 ```
 
-```{r, message=FALSE}
+```{r, eval= FALSE}
 
 
 TimeFixedSigma = sd(rendimientos$QQQ)
@@ -175,7 +174,8 @@ sigma2 = var(rendimientos$QQQ)
 logLTS = -n/2*log(2*pi) - n/2*log(sigma2) - (1/(2*sigma2))*sum((rendimientos$QQQ - mu)^2)
   
 
-
+```
+```{r}
 AIC_comparativo = c("Varianza Tiempo Fijo ~ Normales" = (2)-2*logLTS,
                     "EWMA aproximado" = (2)-2*EWMA@fit$LLH,
                     "GARCH err ~ Normales" = AIC.rugarch(norm_garch),
@@ -190,11 +190,12 @@ cat("El criterio de infomación de Akaike para los modelos en orden descendente 
 sort(AIC_comparativo)
 
 ```
+
 Se espera que la varianza convencional y el modelo EWMA tenga un criterio de información mas pequeño a priori, y se hizo un aproximación a este.
 A priori con el criterio de infomrmación de Akaike, el mejor modelo entre los GARCH es el GJR-GARCH con errores normales.
 Sin embargo el EWMA es incluso más parsimonioso que la varianza a tiempo fijo, pero es solo una primera aproximación.
 
-```{r, message=FALSE}
+```{r, eval= FALSE}
 ## Volatilidades en rendimientos 
 Ventana = 100
 
@@ -213,7 +214,7 @@ Vol_r = data.frame( Date = rendimientos$Date,
 
 ```
 
-```{r,  message=FALSE}
+```{r, eval= FALSE}
 
 ## 
 
@@ -290,7 +291,7 @@ gjrgarch.ged.plot = plot_ly() %>%
 ## Evaluación de desempeño real
 
 Ahora se buscara ver que modelo realmente se adapta mejor a los datos reales, para ello se usará la prueba de Kupiec, que evalua el número de violaciones que tiene un modelo de manera teoríca mediante un experimiento binomial y los realmente sucedidos.
-```{r,  message=FALSE}
+```{r,  , eval= FALSE}
 
 
 tickerV=c("QQQ")
@@ -323,7 +324,7 @@ precios_lp.plot= plot_ly() %>%
             type = "scatter", mode = 'lines')
 
 ```
-```{r,  message=FALSE}
+```{r, eval= FALSE}
 ## Volatilidades en rendimientos 
 Ventana = 200
 # IMPORTANTE: A PESAR DE QUE LA TAREA ESPECIFICA 250 DÍAS SE TOMARAN 200 POR MOTIVOS DE CONVERGENCIA AL SOLVER. 
@@ -346,7 +347,7 @@ Vol_r_lp = data.frame( Date = rendimientos_lp$Date,
 
 
 
-```{r, message=FALSE}
+```{r,  eval= FALSE}
 ## Prueba de Kupiec
 M = 500000
 alpha = 0.05
@@ -438,7 +439,7 @@ CVaR95.plot.gjrgarch.ged = plot_ly() %>%
 
 El modelo qué más se equivoco fue EWMA  con factor de decaimiento 95. Cometio 100 errores. Y haciendo la prueba de Kupiec, debería haber hecho entre 39 y 67
 
-```{r, message=FALSE}
+```{r}
 CVaR95.plot.EWS95
 ```
 
